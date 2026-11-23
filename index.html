@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ANJAYA — Portfolio</title>
+<title>ANJAYA — Portofolio Desainer Grafis, 3D Modeler &amp; Video Editor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -248,8 +248,6 @@ header .wrap{background:rgba(255,255,255,.78);box-shadow:0 10px 34px rgba(139,92
 header.sc .wrap{background:rgba(255,255,255,.93)}
 nav a:hover{background:rgba(139,92,246,.1)}nav a.active{color:#fff;background:linear-gradient(135deg,#8b5cf6,#ec4899);box-shadow:0 6px 18px rgba(139,92,246,.35)}
 .hero::before{background:radial-gradient(circle,rgba(125,211,252,.6),rgba(244,114,182,.38) 45%,transparent 68%)}
-.hero::after{content:"";position:absolute;left:-12%;top:20%;width:170px;height:54px;border-radius:99px;background:#fff;opacity:.9;filter:blur(7px);box-shadow:90px -24px 0 8px #fff,150px 8px 0 -4px #fff,-40px 18px 0 -8px #fff;animation:drift 46s ease-in-out infinite alternate;pointer-events:none}
-@keyframes drift{to{transform:translateX(70vw)}}
 .hero h1{background:linear-gradient(135deg,#7c3aed 5%,#ec4899 52%,#0ea5e9 98%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .spk{position:absolute!important;width:var(--sz);height:var(--sz);background:var(--c);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);animation:twk 3.6s ease-in-out infinite;pointer-events:none;z-index:0}
 @keyframes twk{0%,100%{opacity:.2;transform:scale(.5) rotate(0)}50%{opacity:1;transform:scale(1) rotate(50deg)}}
@@ -289,7 +287,7 @@ header .logo{color:var(--p3)}
 .tool .tn{font-weight:600;font-size:13.5px}.tool .lvl{font:700 12px Manrope,sans-serif;color:var(--p3)}
 .lvb{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:5px}
 .lvb i{height:5px;border-radius:4px;background:#e9e1fa}.lvb i.on{background:linear-gradient(90deg,#8b5cf6,#ec4899)}
-@media (prefers-reduced-motion:reduce){.hero::after,.spk{animation:none}}
+@media (prefers-reduced-motion:reduce){.spk{animation:none}}
 .credit{margin:0 0 26px;max-width:640px;font-size:13px;color:var(--p3);background:rgba(139,92,246,.08);border:1px dashed rgba(139,92,246,.35);border-radius:12px;padding:8px 14px}
 .wcr{margin:12px 0 0;font-size:12.5px;color:var(--muted)}
 
@@ -319,6 +317,31 @@ section .wrap{position:relative;z-index:1}
 .tool{grid-template-columns:34px 1fr auto}
 .tic{width:34px;height:34px;border-radius:10px;font-size:12px}
 .tic.img{background:#fff;border:1px solid #e7dcf7;padding:5px;box-shadow:0 3px 10px rgba(139,92,246,.15)}
+
+/* ===== v10: awan kecil di latar & lapisan parallax ===== */
+.px{position:absolute;top:0;will-change:transform}
+.px>i{position:absolute;left:0;top:0}
+.cld{width:var(--w)!important;height:calc(var(--w)*.3)!important;border-radius:99px;background:#fff;opacity:.85;filter:blur(3px);animation:cdrift 90s ease-in-out infinite alternate}
+.cld::before,.cld::after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cld::before{left:16%;bottom:38%;width:40%;height:140%}
+.cld::after{left:46%;bottom:30%;width:34%;height:110%}
+@keyframes cdrift{from{transform:translateX(-40px)}to{transform:translateX(60px)}}
+@media (prefers-reduced-motion:reduce){.cld{animation:none}}
+
+/* ===== v11: video carousel ===== */
+.videos{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:14px 4px 18px;scrollbar-width:thin;scrollbar-color:#c4b5fd transparent;overscroll-behavior-x:contain}
+.videos::-webkit-scrollbar{height:8px}.videos::-webkit-scrollbar-thumb{background:#c4b5fd;border-radius:8px}.videos::-webkit-scrollbar-track{background:transparent}
+.videos .vid{flex:0 0 min(290px,76vw);scroll-snap-align:center}
+.videos .vid.wide{flex-basis:min(520px,88vw)}
+.videos iframe,.videos video{max-width:100%}
+
+/* ===== v12: carousel video ala slide ===== */
+.videos .vid{transition:transform .25s ease-out,scale .4s ease,filter .4s ease,border-color .25s,box-shadow .25s}
+.videos.slide .vid:not(.on){scale:.94;filter:saturate(.75) brightness(.98)}
+.vdots{display:none;justify-content:center;gap:8px;margin-top:2px}
+.vdots i{width:8px;height:8px;border-radius:8px;background:#d9ccf7;cursor:pointer;transition:width .3s,background .3s}
+.vdots i.on{width:26px;background:linear-gradient(90deg,#8b5cf6,#ec4899)}
+@media (max-width:860px){.videos{padding-inline:calc(50% - min(145px,38vw))}}
 </style>
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -331,9 +354,9 @@ section .wrap{position:relative;z-index:1}
 <div class="hero" id="hero"><div class="stage" id="stage" aria-hidden="true"></div><div class="wrap">
 <div class="eyebrow hk">Graphic Designer / 3D Modeler / Video Editor</div>
 <h1>ANJAYA</h1>
-<p>Saya membantu brand tampil memikat, dipercaya, dan laku: lewat desain, model 3D, video, sampai urusan toko online dan stok gudang. Satu orang, satu alur yang nyambung dari ide sampai barang terkirim.</p>
-<div class="btns"><a class="btn fill" href="#works">Lihat Karya Saya <span aria-hidden="true">&rarr;</span></a><a class="btn glowb" href="#about">Kenalan Dulu</a></div>
-<div class="pick"><span>Lagi cari:</span><button data-pick="Graphic Design">Graphic Design</button><button data-pick="3D Modeling">3D Modeling</button><button data-pick="3D Printing Asset">3D Printing Asset</button><button data-pick="video">Video Editing</button><button data-pick="Onlineshop Campaign">E-commerce &amp; Brand</button></div>
+<p>Mewujudkan gagasan menjadi karya visual yang bermakna: dari desain grafis, model 3D, dan video, hingga pengelolaan toko online. Dikerjakan dengan teliti, dari konsep sampai hasil akhir.</p>
+<div class="btns"><a class="btn fill" href="#works">Lihat Portofolio <span aria-hidden="true">&rarr;</span></a><a class="btn glowb" href="#about">Tentang Saya</a></div>
+<div class="pick"><span>Jelajahi layanan:</span><button data-pick="Graphic Design">Graphic Design</button><button data-pick="3D Modeling">3D Modeling</button><button data-pick="3D Printing Asset">3D Printing Asset</button><button data-pick="video">Video Editing</button><button data-pick="Onlineshop Campaign">E-commerce &amp; Brand</button></div>
 
 </div></div>
 
@@ -342,11 +365,11 @@ section .wrap{position:relative;z-index:1}
 <div class="portrait" id="portrait">Foto profil</div>
 <div>
 <h2>Halo, saya Anjaya.</h2>
-<p class="lead" style="margin-bottom:0">Menurut saya, desain yang bagus bukan sekadar enak dilihat, tapi membuat orang percaya, ingat, lalu membeli. Karena itu saya tidak berhenti di visual: saya juga paham bagaimana sebuah brand dijual, mulai dari tampilan produk, iklan, sampai stok di gudang. Hasilnya, karya yang cantik sekaligus bekerja untuk bisnis Anda.</p>
+<p class="lead" style="margin-bottom:0">Bagi saya, desain yang baik tidak hanya indah dipandang, tetapi juga mampu membangun kepercayaan dan mendukung tujuan bisnis. Karena itu, selain berkarya secara visual, saya turut memahami proses di balik sebuah brand, mulai dari tampilan produk, iklan, hingga pengelolaan stok. Hasilnya adalah karya yang menarik sekaligus bermanfaat bagi pertumbuhan usaha Anda.</p>
 <div class="stats">
 <div class="stat"><b>3+</b><span>Tahun Berkarya</span></div>
-<div class="stat"><b>100+</b><span>Proyek Tuntas</span></div>
-<div class="stat"><b>35+</b><span>Klien Terbantu</span></div>
+<div class="stat"><b>100+</b><span>Proyek Selesai</span></div>
+<div class="stat"><b>35+</b><span>Klien Terlayani</span></div>
 </div>
 
 </div></div>
@@ -357,24 +380,25 @@ section .wrap{position:relative;z-index:1}
 <div class="xh"><div><div class="eyebrow">Keahlian &amp; Layanan</div><h2 style="margin:0">Dari Visual hingga Penjualan</h2></div>
 <div class="xcat"><a href="#works" data-pick="Graphic Design">Desain</a><i>/</i><a href="#works" data-pick="3D Modeling">3D</a><i>/</i><a href="#video" data-pick="video">Video</a><i>/</i><a href="#works" data-pick="Onlineshop Campaign">E-commerce</a></div></div>
 <div class="xgrid">
-<div class="skill xc" data-pick="Graphic Design" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1z"/><path d="M14 7l3 3"/></svg></div><div><h3>Graphic Design</h3><p>Visual yang membuat produk Anda dilirik, diingat, dan dipercaya, dari kaos dan thumbnail sampai identitas brand utuh.</p><div class="chips"><span class="chip">T-Shirt</span><span class="chip">Thumbnail</span><span class="chip">Branding</span><span class="chip">Media Sosial</span><span class="chip">Kampanye</span></div><span class="go">Lihat hasilnya <i>&rarr;</i></span></div></div>
-<div class="skill xc" data-pick="3D Modeling" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5v-9z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg></div><div><h3>3D Modeling</h3><p>Karakter, properti, hingga suasana 3D yang detail dan terasa hidup, dibangun dari nol di Blender.</p><div class="chips"><span class="chip">Produk</span><span class="chip">Aset</span><span class="chip">3D Viewer</span><span class="chip">Karakter</span><span class="chip">Arsitektur</span></div><span class="go">Lihat hasilnya <i>&rarr;</i></span></div></div>
-<div class="skill xc" data-pick="3D Printing Asset" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 20h14"/><path d="M7 20v-3h10v3"/><path d="M9 17V8l3-4 3 4v9"/><path d="M9 12h6"/></svg></div><div><h3>3D Printing Asset</h3><p>Model yang bukan cuma cantik di layar, tapi benar-benar mulus saat dicetak: charm, gantungan kunci, figurin, sampai komponen fungsional.</p><div class="chips"><span class="chip">3D Printing</span><span class="chip">Clicker</span><span class="chip">Mainan</span><span class="chip">Perkakas</span><span class="chip">Figurine</span><span class="chip">Keychain</span></div><span class="go">Lihat hasilnya <i>&rarr;</i></span></div></div>
-<div class="skill xc" data-pick="video" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg></div><div><h3>Video Editing</h3><p>Video pendek yang menahan jempol penonton: reels produk, iklan, dan konten sosial media dengan ritme yang pas.</p><div class="chips"><span class="chip">Video Pendek</span><span class="chip">Clipping</span><span class="chip">Periklanan</span><span class="chip">Showcase</span></div><span class="go">Lihat hasilnya <i>&rarr;</i></span></div></div>
-<div class="skill xc" data-pick="Onlineshop Campaign" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a2.5 2.5 0 005 0 2.5 2.5 0 006 0 2.5 2.5 0 005 0"/><path d="M5 12v8h14v-8"/><path d="M10 20v-5h4v5"/></svg></div><div><h3>E-commerce &amp; Brand</h3><p>Toko online yang dikelola dari hulu ke hilir, mulai dari katalog, iklan, promo, sampai stok, supaya penjualan jalan dan brand makin kuat.</p><div class="chips"><span class="chip">Periklanan</span><span class="chip">Branding</span><span class="chip">Omnichannel</span><span class="chip">Product SKU</span><span class="chip">Listing</span><span class="chip">Kampanye</span><span class="chip">Promosi</span><span class="chip">Affiliate</span><span class="chip">Kontrol Stok</span></div><span class="go">Lihat hasilnya <i>&rarr;</i></span></div></div>
+<div class="skill xc" data-pick="Graphic Design" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1z"/><path d="M14 7l3 3"/></svg></div><div><h3>Graphic Design</h3><p>Visual yang memperkuat identitas dan daya tarik produk, mulai dari desain kaos dan thumbnail hingga identitas brand yang utuh.</p><div class="chips"><span class="chip">T-Shirt</span><span class="chip">Thumbnail</span><span class="chip">Branding</span><span class="chip">Media Sosial</span><span class="chip">Kampanye</span></div><span class="go">Lihat karya <i>&rarr;</i></span></div></div>
+<div class="skill xc" data-pick="3D Modeling" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5v-9z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg></div><div><h3>3D Modeling</h3><p>Karakter, properti, hingga suasana 3D yang detail dan hidup, dimodelkan dengan cermat di Blender.</p><div class="chips"><span class="chip">Produk</span><span class="chip">Aset</span><span class="chip">Karakter</span><span class="chip">Arsitektur</span></div><span class="go">Lihat karya <i>&rarr;</i></span></div></div>
+<div class="skill xc" data-pick="3D Printing Asset" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 20h14"/><path d="M7 20v-3h10v3"/><path d="M9 17V8l3-4 3 4v9"/><path d="M9 12h6"/></svg></div><div><h3>3D Printing Asset</h3><p>Model yang dirancang agar optimal saat dicetak: charm, gantungan kunci, figurin, hingga komponen fungsional.</p><div class="chips"><span class="chip">3D Printing</span><span class="chip">Clicker</span><span class="chip">Mainan</span><span class="chip">Figurine</span><span class="chip">Keychain</span></div><span class="go">Lihat karya <i>&rarr;</i></span></div></div>
+<div class="skill xc" data-pick="video" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg></div><div><h3>Video Editing</h3><p>Video pendek yang menarik dan terarah: reels produk, iklan, dan konten media sosial dengan alur yang rapi.</p><div class="chips"><span class="chip">Video Pendek</span><span class="chip">Clipping</span><span class="chip">Periklanan</span><span class="chip">Showcase</span></div><span class="go">Lihat karya <i>&rarr;</i></span></div></div>
+<div class="skill xc" data-pick="Onlineshop Campaign" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a2.5 2.5 0 005 0 2.5 2.5 0 006 0 2.5 2.5 0 005 0"/><path d="M5 12v8h14v-8"/><path d="M10 20v-5h4v5"/></svg></div><div><h3>E-commerce &amp; Brand</h3><p>Pengelolaan toko online secara menyeluruh, mulai dari katalog, iklan, promo, hingga stok, untuk mendukung penjualan dan memperkuat brand.</p><div class="chips"><span class="chip">Periklanan</span><span class="chip">Branding</span><span class="chip">Omnichannel</span><span class="chip">Product SKU</span><span class="chip">Listing</span><span class="chip">Kampanye</span><span class="chip">Promosi</span><span class="chip">Affiliate</span><span class="chip">Kontrol Stok</span></div><span class="go">Lihat karya <i>&rarr;</i></span></div></div>
 </div>
+<div class="vdots" id="vdots" aria-hidden="true"></div>
 </div></section>
 
 <section id="works"><div class="wrap">
 <div class="wh"><div><div class="eyebrow">Portofolio</div><h2>Proyek Kolaborasi dengan Klien</h2>
-<p class="lead">Setiap koleksi lahir dari kebutuhan klien yang nyata. Pilih satu untuk melihat idenya jadi hasil.</p><p class="credit">Seluruh karya di halaman ini adalah hasil kerja sama saya dengan klien, dan kredit kepemilikannya ada pada masing-masing klien.</p></div><div class="viewer" id="viewer" aria-hidden="true"><div class="vbox" id="vbox"></div><small>Geser untuk Memutar</small></div></div>
+<p class="lead">Setiap koleksi lahir dari kebutuhan klien yang nyata. Silakan pilih satu koleksi untuk melihat karyanya.</p><p class="credit">Seluruh karya pada halaman ini merupakan hasil kerja sama dengan klien, dan hak kepemilikannya berada pada masing-masing klien.</p></div><div class="viewer" id="viewer" aria-hidden="true"><div class="vbox" id="vbox"></div><small>Geser untuk Memutar</small></div></div>
 <div class="wcards" id="wcards"></div>
 </div></section>
 
 <section id="video"><div class="wrap">
 <h2>Video yang Bercerita</h2>
-<p class="lead" style="margin-bottom:10px">Tiga video pilihan, dipotong dengan ritme yang menahan penonton sampai detik terakhir.</p><p class="credit">Video-video ini adalah hasil kerja sama saya dengan klien, dan kreditnya milik masing-masing klien.</p>
-<div class="videos" id="vids">
+<p class="lead" style="margin-bottom:10px">Tiga video pilihan dengan alur yang dirangkai agar penonton tetap tertarik hingga akhir.</p><p class="credit">Video-video ini merupakan hasil kerja sama dengan klien, dan kreditnya milik masing-masing klien.</p>
+<div class="videos" id="vids" aria-label="Daftar video, geser ke kanan atau kiri">
 <div class="vid"><div class="scr"><span class="play"></span></div><div class="t">Product Ad<small>Premiere &middot; 0:45</small></div></div>
 <div class="vid"><div class="scr"><span class="play"></span></div><div class="t">Brand Campaign Video<small>Premiere &middot; 1:20</small></div></div>
 <div class="vid short"><div class="scr"><span class="play"></span></div><div class="t">Short-Form Reels Video<small>CapCut &middot; 0:20</small></div></div>
@@ -383,16 +407,16 @@ section .wrap{position:relative;z-index:1}
 
 <section id="ops"><div class="wrap">
 <h2>Visual Kuat, Operasional Rapi</h2>
-<p class="lead">Visual yang bagus butuh operasional yang rapi. Inilah yang membuat hasilnya bukan cuma cantik, tapi juga jalan di lapangan.</p>
+<p class="lead">Karya visual yang baik perlu ditopang operasional yang tertata, agar hasilnya tidak hanya indah, tetapi juga berjalan efektif.</p>
 <div class="ops">
-<div class="skill"><h3>Toko Online</h3><p>Listing, foto, harga, dan promo yang konsisten di semua kanal, supaya pembeli selalu menemukan toko yang meyakinkan.</p></div>
-<div class="skill"><h3>Stok &amp; Gudang</h3><p>Stok tercatat, pembelian terencana, stok opname rutin. Tidak ada pesanan batal gara-gara barang ternyata kosong.</p></div>
-<div class="skill"><h3>Iklan Berbayar</h3><p>Meta Ads dari menentukan target audiens sampai membaca hasilnya, agar setiap rupiah iklan bekerja maksimal.</p></div>
+<div class="skill"><h3>Toko Online</h3><p>Listing, foto, harga, dan promo yang konsisten di semua kanal penjualan, sehingga toko tampil meyakinkan bagi pembeli.</p></div>
+<div class="skill"><h3>Stok &amp; Gudang</h3><p>Pencatatan stok yang rapi, pembelian terencana, dan stok opname rutin, untuk menjaga ketersediaan barang dan kelancaran pesanan.</p></div>
+<div class="skill"><h3>Iklan Berbayar</h3><p>Pengelolaan Meta Ads, mulai dari penentuan target audiens hingga evaluasi hasil, agar anggaran iklan terpakai secara optimal.</p></div>
 </div>
 </div></section>
 
 <section id="process"><div class="wrap"><div class="pt">
-<div class="pl1"><div class="eyebrow">Proses Saya</div><h2>Cara Saya Bekerja</h2><p class="lead" style="margin-bottom:28px">Proses sederhana dan efektif untuk hasil terbaik.</p>
+<div class="pl1"><div class="eyebrow">Proses Saya</div><h2>Cara Saya Bekerja</h2><p class="lead" style="margin-bottom:28px">Proses yang sederhana dan terstruktur demi hasil terbaik.</p>
 <div class="steps">
 <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/></svg></div><small>01</small><b>Brief</b><span>Memahami kebutuhan dan tujuan.</span></div>
 <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></div><small>02</small><b>Riset</b><span>Menggali, menganalisis, dan mengumpulkan referensi.</span></div>
@@ -403,13 +427,13 @@ section .wrap{position:relative;z-index:1}
 </div></div></section>
 
 <section id="contact"><div class="wrap"><div class="contact"><div class="stage cstage" id="cstage" aria-hidden="true"></div>
-<h2>Ayo Berkolaborasi!</h2>
-<p>Ceritakan kebutuhan Anda, dan saya akan segera membalas.</p>
+<h2>Mari Berkolaborasi</h2>
+<p>Sampaikan kebutuhan Anda, dan saya akan menghubungi Anda sesegera mungkin.</p>
 <div class="cc"><div class="cd"><span>Telepon / WhatsApp</span><a href="https://wa.me/62895340911029" target="_blank" rel="noopener">+62-895-3409-11029</a><a class="mbtn" href="https://wa.me/62895340911029" target="_blank" rel="noopener">Kirim Pesan <span aria-hidden="true">&rarr;</span></a></div><div class="cd"><span>Gmail</span><a href="mailto:mr.andikaws@gmail.com">mr.andikaws@gmail.com</a><a class="mbtn" href="mailto:mr.andikaws@gmail.com">Kirim Pesan <span aria-hidden="true">&rarr;</span></a></div></div>
 </div></div></section>
-<section id="partner" style="padding-top:24px"><div class="wrap"><h2>Mitra Kerja Sama</h2><p class="lead">Klien yang pernah bekerja sama dengan saya.</p></div><div class="mq"><div class="mt" id="mt"></div></div></section>
+<section id="partner" style="padding-top:24px"><div class="wrap"><h2>Mitra Kerja Sama</h2><p class="lead">Brand dan bisnis yang telah mempercayakan karyanya kepada saya.</p></div><div class="mq"><div class="mt" id="mt"></div></div></section>
 </main>
-<div class="wm" id="wm" role="dialog" aria-modal="true" aria-labelledby="wmt"><div class="wmp"><button class="wmx" type="button" aria-label="Tutup">&times;</button><div class="wmb"><div class="wmh"><div class="eyebrow" id="wmn"></div><h3 id="wmt"></h3><p id="wmd"></p><span class="wmc" id="wmc"></span><p class="wcr">Kredit: seluruh karya di koleksi ini adalah hasil kerja sama saya dengan klien, dan menjadi milik masing-masing klien.</p></div><div class="grid" id="wmg"></div></div></div></div>
+<div class="wm" id="wm" role="dialog" aria-modal="true" aria-labelledby="wmt"><div class="wmp"><button class="wmx" type="button" aria-label="Tutup">&times;</button><div class="wmb"><div class="wmh"><div class="eyebrow" id="wmn"></div><h3 id="wmt"></h3><p id="wmd"></p><span class="wmc" id="wmc"></span><p class="wcr">Kredit: seluruh karya pada koleksi ini merupakan hasil kerja sama dengan klien dan menjadi milik masing-masing klien.</p></div><div class="grid" id="wmg"></div></div></div></div>
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Pratinjau karya"><button aria-label="Tutup" id="lbx">&times;</button><button class="lbn l" id="lbp" aria-label="Sebelumnya">&lsaquo;</button><button class="lbn r" id="lbnx" aria-label="Berikutnya">&rsaquo;</button><div id="lbc"></div></div>
 <button class="top" id="totop" aria-label="Kembali ke atas"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="21"/></svg><b>&uarr;</b></button>
 <div class="toast" id="toast" role="status"></div>
@@ -422,7 +446,7 @@ var CFG={
  profile:"profil.jpg?v=2", // jalur foto profil (file ada di folder yang sama dengan index.html)
  works:[ // 5 kategori = 5 kartu. cover = foto sampul kartu, items = [foto, lebar, tinggi] yang tampil di pop-up
   {title:"3D Modeling",
-   desc:"Karakter, kostum, rambut bergaya anime, sampai candi, kapal, dan diorama kecil, dimodelkan satu per satu di Blender dengan detail yang terasa hidup.",
+   desc:"Karakter, kostum, rambut bergaya anime, hingga candi, kapal, dan diorama kecil, dimodelkan satu per satu di Blender dengan detail yang cermat.",
    cover:"images/3d-modeling-13.webp",
    items:[
     ["images/3d-modeling-01.webp", 1433, 859],
@@ -446,7 +470,7 @@ var CFG={
     ["images/3d-modeling-19.webp", 1500, 712]
    ]},
   {title:"3D Printing Asset",
-   desc:"Model yang dirancang supaya mulus saat dicetak: charm karakter, gantungan kunci, figurin, dan komponen fungsional yang siap dijual maupun dipakai.",
+   desc:"Model yang dirancang agar hasil cetaknya rapi: charm karakter, gantungan kunci, figurin, dan komponen fungsional yang siap dipakai maupun dijual.",
    cover:"images/3d-printing-asset-23.webp",
    items:[
     ["images/3d-printing-asset-01.webp", 1339, 599],
@@ -480,17 +504,19 @@ var CFG={
     ["images/3d-printing-asset-29.webp", 1500, 726]
    ]},
   {title:"Banner & Brosur",
-   desc:"Brosur, banner, dan layout promosi yang pesannya langsung tertangkap, dipakai untuk merekrut mitra dan mendorong penjualan produk.",
+   desc:"Brosur, banner, dan layout promosi yang menyampaikan pesan dengan jelas, digunakan untuk merekrut mitra dan mendukung penjualan produk.",
    cover:"images/banner-brosur-03.webp",
    items:[
     ["images/banner-brosur-01.webp", 1500, 1061],
     ["images/banner-brosur-02.webp", 1500, 1061],
     ["images/banner-brosur-03.webp", 1060, 1500],
     ["images/banner-brosur-04.webp", 563, 1500],
-    ["images/banner-brosur-05.webp", 562, 1500]
+    ["images/banner-brosur-05.webp", 562, 1500],
+    ["images/banner-brosur-06.webp", 1058, 1500],
+    ["images/banner-brosur-07.webp", 900, 1500]
    ]},
   {title:"Onlineshop Campaign",
-   desc:"Banner dan visual promo marketplace yang dibuat untuk memancing klik dan meyakinkan pembeli: paket produk, kampanye musiman, hingga promo ongkir.",
+   desc:"Banner dan visual promosi marketplace yang dirancang untuk menarik perhatian dan menumbuhkan kepercayaan pembeli: paket produk, kampanye musiman, hingga promo ongkir.",
    cover:"images/onlineshop-campaign-06.webp",
    items:[
     ["images/onlineshop-campaign-01.webp", 1020, 1020],
@@ -510,7 +536,7 @@ var CFG={
     ["images/onlineshop-campaign-15.webp", 1024, 1024]
    ]},
   {title:"Social Media Feed",
-   desc:"Feed dan story yang konsisten dan enak di-scroll: menonjolkan produk, membangun suasana brand, dan menjaga akun tetap hidup.",
+   desc:"Feed dan story yang konsisten dan nyaman dilihat: menonjolkan produk, membangun suasana brand, dan menjaga akun tetap aktif.",
    cover:"images/social-media-feed-02.webp",
    items:[
     ["images/social-media-feed-01.webp", 1080, 1350],
@@ -533,7 +559,7 @@ var CFG={
   "3D Modeling":[{name:"Blender",mark:"B",bg:"linear-gradient(135deg,#F5792A,#265787)",fg:"#fff",lv:3,logo:"images/tools/blender.svg"}],
   "3D Printing Asset":[{name:"Bambu Studio",mark:"Bs",bg:"#00AE42",fg:"#fff",lv:1,logo:"images/tools/bambu-studio.svg"},{name:"UltiMaker Cura",mark:"Cu",bg:"linear-gradient(135deg,#1B6FD1,#0A3F8F)",fg:"#fff",lv:2,logo:"images/tools/ultimaker-cura.png"}],
   "Video Editing":[{name:"Adobe Premiere Pro",mark:"Pr",bg:"#00005B",fg:"#9999FF",ring:"#9999FF",lv:2,logo:""},{name:"CapCut Pro",mark:"Cc",bg:"#0b0b0b",fg:"#fff",ring:"#ffffff55",lv:3,logo:"images/tools/capcut.svg"}],
-  "E-commerce & Brand":[{name:"Shopee",mark:"S",bg:"#EE4D2D",fg:"#fff",lv:3,logo:"images/tools/shopee.svg"},{name:"TikTok Shop",mark:"Tt",bg:"#000",fg:"#fff",ring:"#25F4EE",lv:3,logo:"images/tools/tiktok-shop.svg"},{name:"Tokopedia",mark:"T",bg:"#03AC0E",fg:"#fff",lv:3,logo:"images/tools/tokopedia.svg"},{name:"Meta",mark:"\u221E",bg:"#0866FF",fg:"#fff",lv:3,logo:"images/tools/meta.svg"}]
+  "E-commerce & Brand":[{name:"Shopee",mark:"S",bg:"#EE4D2D",fg:"#fff",lv:3,logo:"images/tools/shopee.svg"},{name:"TikTok Shop",mark:"Tt",bg:"#000",fg:"#fff",ring:"#25F4EE",lv:2,logo:"images/tools/tiktok-shop.svg"},{name:"Tokopedia",mark:"T",bg:"#03AC0E",fg:"#fff",lv:2,logo:"images/tools/tokopedia.svg"},{name:"Meta",mark:"\u221E",bg:"#0866FF",fg:"#fff",lv:2,logo:"images/tools/meta.svg"}]
  },
  videos:[
   {title:"Tour Review",sub:"YouTube Shorts",src:"https://www.youtube.com/shorts/C8LHAMIZUnU",vertical:true},
@@ -543,7 +569,7 @@ var CFG={
  ],
  partners:[
   {name:"Beefour Creative Agency",dark:1,logo:"partner-beefour.png"},
-  {name:"Citra SR12",logo:"partner-citra-sr12.png"},
+  {name:"Citra SR12",dark:1,logo:"partner-citra-sr12.png"},
   {name:"Westart Shopping",dark:1,logo:"partner-westart.png"},
   {name:"Rumah Tanah Liat Citra",dark:1,logo:"partner-rumah-tanah-liat-citra.png"},
   {name:"Rumah Kebangsaan Pancasila",dark:1,logo:"partner-rumah-kebangsaan-pancasila.png"},
@@ -604,9 +630,9 @@ var cds=document.querySelectorAll(".cd");
 var waHref="https://wa.me/"+CFG.phone.replace(/\D/g,"")+"?text="+encodeURIComponent("Halo Anjaya, saya tertarik untuk bekerja sama.");
 cds[0].querySelectorAll("a").forEach(function(a){a.href=waHref;a.target="_blank";a.rel="noopener"});cds[0].querySelector("a").textContent=CFG.phoneShow;
 cds[1].querySelectorAll("a").forEach(function(a){a.href="mailto:"+CFG.email;a.addEventListener("click",function(e){if(matchMedia("(hover:hover) and (pointer:fine)").matches){e.preventDefault();window.open("https://mail.google.com/mail/?view=cm&fs=1&to="+encodeURIComponent(CFG.email),"_blank","noopener")}})});cds[1].querySelector("a").textContent=CFG.email;
-if(CFG.videos.length)document.getElementById("vids").innerHTML=CFG.videos.map(function(v){var m=v.src.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/),ar=v.vertical?"9/16":"16/9",mx=v.vertical?"height:500px;width:auto;max-width:100%;margin:0 auto;":"",
+if(CFG.videos.length)document.getElementById("vids").innerHTML=CFG.videos.map(function(v){var m=v.src.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/),ar=v.vertical?"9/16":"16/9",mx="",
  md=m?'<iframe src="https://www.youtube.com/embed/'+m[1]+'" style="width:100%;aspect-ratio:'+ar+';'+mx+'border:0;display:block" allowfullscreen loading="lazy"></iframe>':'<video controls preload="metadata" playsinline'+(v.poster?' poster="'+v.poster+'"':'')+' src="'+v.src+'" style="width:100%;aspect-ratio:'+ar+';'+mx+'object-fit:contain;background:#000;display:block"></video>';
- return '<div class="vid">'+md+'<div class="t">'+(v.title||"")+'<small>'+(v.sub||"")+'</small></div></div>'}).join("");
+ return '<div class="vid'+(v.vertical?'':' wide')+'">'+md+'<div class="t">'+(v.title||"")+'<small>'+(v.sub||"")+'</small></div></div>'}).join("");
 var ts=document.getElementById("toast"),tm;
 document.querySelectorAll("[data-copy]").forEach(function(b){b.addEventListener("click",function(){var v=b.dataset.copy;(navigator.clipboard?navigator.clipboard.writeText(v):Promise.reject()).catch(function(){}).then(function(){ts.textContent=v+" disalin";ts.classList.add("on");clearTimeout(tm);tm=setTimeout(function(){ts.classList.remove("on")},1800)})})});
 if(fine)document.querySelectorAll(".btn").forEach(function(b){b.addEventListener("pointermove",function(e){var r=b.getBoundingClientRect();b.style.transform="translate("+(e.clientX-r.left-r.width/2)*.15+"px,"+(e.clientY-r.top-r.height/2)*.25+"px)"});b.addEventListener("pointerleave",function(){b.style.transform=""})});
@@ -668,17 +694,29 @@ document.querySelectorAll(".xc").forEach(function(c){var k=c.querySelector("h3")
   return '<div class="tool">'+ic+'<span class="tn">'+it.name+'</span><span class="lvl">'+lb+'</span><span class="lvb" role="img" aria-label="Tingkat: '+lb+'">'+b+'</span></div>'}).join("")+'</div></div>';
  c.querySelector(".go").insertAdjacentHTML("beforebegin",h)});
 
-/* ===== v7: kilau bintang imajinatif ===== */
-(function(){var C=["#f9a8d4","#7dd3fc","#fcd34d","#c4b5fd"];[hero,ct].forEach(function(h,k){var n=k?6:14,t="";for(var i=0;i<n;i++)t+='<i class="spk" aria-hidden="true" style="left:'+(Math.random()*96)+'%;top:'+(Math.random()*90)+'%;--c:'+C[i%4]+';--sz:'+(10+Math.random()*16)+'px;animation-delay:'+(Math.random()*4)+'s"></i>';h.insertAdjacentHTML("afterbegin",t)})})();
-/* ===== v8: langit bintang di seluruh halaman ===== */
-(function(){var C=["#f9a8d4","#7dd3fc","#fcd34d","#c4b5fd","#86efd8"],R=Math.random,k=innerWidth<700?.5:1;
-function st(n,cl,mx){var t="";n=Math.round(n*k);for(var i=0;i<n;i++)t+='<i class="'+cl+'" aria-hidden="true" style="left:'+(R()*96)+'%;top:'+(R()*(mx||92))+'%;--c:'+C[i%5]+';--sz:'+(10+R()*(cl=="flr"?30:16))+'px;animation-delay:'+(R()*6)+'s;animation-duration:'+(3+R()*4)+'s"></i>';return t}
-var sky=document.createElement("div");sky.className="sky";sky.setAttribute("aria-hidden","true");sky.innerHTML=st(26,"spk")+st(7,"flr");document.body.prepend(sky);
-document.querySelectorAll("section").forEach(function(e){e.insertAdjacentHTML("afterbegin",st(5,"spk")+st(2,"flr"))});
+/* ===== v10: langit parallax (bintang, kilatan, awan ikut scroll pelan) ===== */
+(function(){var C=["#f9a8d4","#7dd3fc","#fcd34d","#c4b5fd","#86efd8"],R=Math.random,k=innerWidth<700?.55:1,L=[],H=innerHeight+160,tk=0;
+var sky=document.createElement("div");sky.className="sky";sky.setAttribute("aria-hidden","true");document.body.prepend(sky);
+function add(cl,n,f1,f2,s1,s2){n=Math.round(n*k);for(var i=0;i<n;i++){var w=document.createElement("div"),e=document.createElement("i");w.className="px";e.className=cl;
+e.style.cssText="--c:"+C[i%5]+";--sz:"+(s1+R()*(s2-s1))+"px;--w:"+(s1+R()*(s2-s1))+"px;animation-delay:"+(R()*8)+"s;animation-duration:"+(cl=="cld"?60+R()*60:3+R()*4)+"s";
+w.style.left=(R()*94)+"%";w.appendChild(e);sky.appendChild(w);L.push({w:w,y:R(),f:f1+R()*(f2-f1)})}}
+add("cld",8,.04,.12,70,150);add("spk",34,.1,.3,9,24);add("flr",8,.08,.22,14,40);
+function go(){tk=0;var y=scrollY;for(var i=0;i<L.length;i++){var o=L[i],p=((o.y*H-y*o.f)%H+H)%H-80;o.w.style.transform="translate3d(0,"+p+"px,0)"}}
+function q(){if(!tk){tk=1;requestAnimationFrame(go)}}
+addEventListener("scroll",q,{passive:true});addEventListener("resize",function(){H=innerHeight+160;q()});go();
 var sh="";for(var i=0;i<3;i++)sh+='<i class="shoot" aria-hidden="true" style="--x:'+(8+i*26)+'%;--y:'+(6+i*9)+'%;--c:'+C[i*2%5]+';animation-delay:'+(i*2.6+1)+'s"></i>';
-hero.insertAdjacentHTML("afterbegin",st(5,"flr",80)+sh);
+hero.insertAdjacentHTML("afterbegin",sh);
 if(fine&&!reduce){var lt=0;addEventListener("pointermove",function(e){var n=performance.now();if(n-lt<70)return;lt=n;var d=document.createElement("i");d.className="spk trail";d.style.cssText="position:fixed!important;pointer-events:none;left:"+(e.clientX+R()*16-8)+"px;top:"+(e.clientY+R()*16-8)+"px;--c:"+C[(R()*5)|0]+";--sz:"+(8+R()*10)+"px";document.body.appendChild(d);setTimeout(function(){d.remove()},900)})}
 })();
+/* ===== v12: video geser (swipe) dengan kartu aktif ===== */
+(function(){var v=document.getElementById("vids"),d=document.getElementById("vdots");if(!v||!d)return;
+function cards(){return[].slice.call(v.querySelectorAll(".vid"))}
+function build(){d.innerHTML=cards().map(function(){return"<i></i>"}).join("");[].forEach.call(d.children,function(e,n){e.addEventListener("click",function(){var c=cards()[n];v.scrollTo({left:c.offsetLeft-(v.clientWidth-c.offsetWidth)/2,behavior:reduce?"auto":"smooth"})})})}
+function upd(){var c=cards(),m=v.scrollLeft+v.clientWidth/2,b=0,bd=1e9;c.forEach(function(e,n){var x=Math.abs(e.offsetLeft+e.offsetWidth/2-m);if(x<bd){bd=x;b=n}});
+c.forEach(function(e,n){e.classList.toggle("on",n===b)});[].forEach.call(d.children,function(e,n){e.classList.toggle("on",n===b)});
+d.style.display=v.scrollWidth>v.clientWidth+4?"flex":"none";v.classList.toggle("slide",v.scrollWidth>v.clientWidth+4)}
+var t=0;v.addEventListener("scroll",function(){if(!t){t=1;requestAnimationFrame(function(){t=0;upd()})}},{passive:true});
+addEventListener("resize",upd);addEventListener("load",upd);build();upd()})();
 </script>
 </body>
 </html>
