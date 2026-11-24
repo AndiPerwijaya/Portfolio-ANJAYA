@@ -342,6 +342,44 @@ section .wrap{position:relative;z-index:1}
 .vdots i{width:8px;height:8px;border-radius:8px;background:#d9ccf7;cursor:pointer;transition:width .3s,background .3s}
 .vdots i.on{width:26px;background:linear-gradient(90deg,#8b5cf6,#ec4899)}
 @media (max-width:860px){.videos{padding-inline:calc(50% - min(145px,38vw))}}
+
+/* ===== v13: tampilan toko online ===== */
+.ttabs{display:inline-flex;gap:4px;padding:5px;margin:8px 0 24px;border-radius:99px;background:rgba(255,255,255,.85);border:1px solid var(--line);box-shadow:0 8px 24px rgba(139,92,246,.14)}
+.ttabs button{display:inline-flex;align-items:center;gap:8px;border:0;background:none;padding:10px 22px;border-radius:99px;font:600 14px/1 inherit;font-family:inherit;color:var(--muted);cursor:pointer;transition:color .25s,background .25s,box-shadow .25s}
+.ttabs button:hover{color:var(--p3)}
+.ttabs button.on{color:#fff;background:linear-gradient(135deg,#8b5cf6,#ec4899);box-shadow:0 6px 18px rgba(139,92,246,.4)}
+.tpanel{display:none}.tpanel.on{display:block;animation:tin .5s ease}
+@keyframes tin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.tslide{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:12px 4px 16px;scrollbar-width:none;overscroll-behavior-x:contain}
+.tslide::-webkit-scrollbar{display:none}
+.tslide.web .tdev{flex:1 1 0;min-width:0}
+.tslide.hp{justify-content:safe center}
+.tslide.hp .tdev{flex:0 0 250px}
+.tdev{margin:0;scroll-snap-align:center;transition:scale .4s ease,filter .4s ease}
+.tslide.slide .tdev:not(.on){scale:.94;filter:saturate(.75)}
+.tbar{display:flex;align-items:center;gap:7px;height:36px;padding:0 14px;border-radius:16px 16px 0 0;background:linear-gradient(180deg,#fff,#f6f0ff);border:1px solid var(--line);border-bottom:0}
+.tbar i{width:10px;height:10px;border-radius:50%;background:#f9a8d4}.tbar i:nth-child(2){background:#fcd34d}.tbar i:nth-child(3){background:#86efd8}
+.tbar span{margin-left:8px;flex:1;max-width:260px;padding:4px 12px;border-radius:99px;background:#fff;border:1px solid var(--line);font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tview{height:540px;overflow-y:auto;border:1px solid var(--line);border-radius:0 0 16px 16px;background:#fff;box-shadow:0 18px 44px rgba(139,92,246,.2);scrollbar-width:thin;scrollbar-color:#c4b5fd transparent;overscroll-behavior:contain}
+.tview::-webkit-scrollbar{width:8px}.tview::-webkit-scrollbar-thumb{background:#c4b5fd;border-radius:8px}
+.tview img{display:block;width:100%;height:auto;cursor:zoom-in}
+.tphone{padding:7px;border-radius:32px;background:linear-gradient(135deg,#f9a8d4,#a78bfa 55%,#7dd3fc);box-shadow:0 18px 44px rgba(139,92,246,.3),0 0 0 1px rgba(255,255,255,.7) inset}
+.tphone img{display:block;width:100%;height:auto;border-radius:25px;cursor:zoom-in;background:#fff}
+.tcap{margin-top:12px;text-align:center;font-weight:600;font-size:14px}
+.tcap small{display:block;margin-top:2px;font-weight:400;font-size:12px;color:var(--muted)}
+.tzv{position:fixed;inset:0;z-index:100;background:rgba(40,25,70,.93);display:none}
+.tzv.on{display:block}
+.tzs{height:100%;overflow:auto;padding:58px 12px 28px;text-align:center}
+.tzv img{display:inline-block;box-shadow:0 20px 60px rgba(0,0,0,.45);cursor:zoom-out;background:#fff}
+.tzv.web img{width:min(1200px,96vw);height:auto;border-radius:10px}
+.tzv.hp img{height:calc(100vh - 90px);width:auto;max-width:96vw;border-radius:22px}
+#tzx{position:fixed;top:14px;right:16px;z-index:101;width:42px;height:42px;border-radius:50%;border:0;background:#fff;color:var(--p3);font-size:26px;line-height:1;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+@media (max-width:860px){
+.tslide{padding-inline:calc(50% - min(44vw,150px))}
+.tslide.web .tdev{flex:0 0 min(88vw,320px)}
+.tslide.hp{justify-content:flex-start}.tslide.hp .tdev{flex:0 0 min(250px,68vw)}
+.tview{height:430px}
+}
 </style>
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -386,7 +424,6 @@ section .wrap{position:relative;z-index:1}
 <div class="skill xc" data-pick="video" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg></div><div><h3>Video Editing</h3><p>Video pendek yang menarik dan terarah: reels produk, iklan, dan konten media sosial dengan alur yang rapi.</p><div class="chips"><span class="chip">Video Pendek</span><span class="chip">Clipping</span><span class="chip">Periklanan</span><span class="chip">Showcase</span></div><span class="go">Lihat karya <i>&rarr;</i></span></div></div>
 <div class="skill xc" data-pick="Onlineshop Campaign" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a2.5 2.5 0 005 0 2.5 2.5 0 006 0 2.5 2.5 0 005 0"/><path d="M5 12v8h14v-8"/><path d="M10 20v-5h4v5"/></svg></div><div><h3>E-commerce &amp; Brand</h3><p>Pengelolaan toko online secara menyeluruh, mulai dari katalog, iklan, promo, hingga stok, untuk mendukung penjualan dan memperkuat brand.</p><div class="chips"><span class="chip">Periklanan</span><span class="chip">Branding</span><span class="chip">Omnichannel</span><span class="chip">Product SKU</span><span class="chip">Listing</span><span class="chip">Kampanye</span><span class="chip">Promosi</span><span class="chip">Affiliate</span><span class="chip">Kontrol Stok</span></div><span class="go">Lihat karya <i>&rarr;</i></span></div></div>
 </div>
-<div class="vdots" id="vdots" aria-hidden="true"></div>
 </div></section>
 
 <section id="works"><div class="wrap">
@@ -403,6 +440,17 @@ section .wrap{position:relative;z-index:1}
 <div class="vid"><div class="scr"><span class="play"></span></div><div class="t">Brand Campaign Video<small>Premiere &middot; 1:20</small></div></div>
 <div class="vid short"><div class="scr"><span class="play"></span></div><div class="t">Short-Form Reels Video<small>CapCut &middot; 0:20</small></div></div>
 </div>
+<div class="vdots" id="vdots" aria-hidden="true"></div>
+</div></section>
+
+<section id="toko"><div class="wrap">
+<div class="eyebrow">E-commerce</div>
+<h2>Tampilan Toko Online</h2>
+<p class="lead" style="margin-bottom:10px">Penataan halaman toko Citra SR12 di Shopee, dari banner promo dan voucher hingga etalase produk, dalam versi website dan ponsel.</p><p class="credit">Tampilan toko ini merupakan hasil kerja sama dengan klien, dan kreditnya milik Citra SR12.</p>
+<div class="ttabs" role="tablist" aria-label="Pilih tampilan"><button type="button" role="tab" class="on" aria-selected="true" data-t="web"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Website</button><button type="button" role="tab" aria-selected="false" data-t="hp"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M11 18h2"/></svg>Ponsel</button></div>
+<div class="tpanel on" id="t-web" role="tabpanel"><div class="tslide web"><figure class="tdev"><div class="tbar"><i></i><i></i><i></i><span>shopee.co.id/citrasr12</span></div><div class="tview"><img src="images/toko/web-1.webp" width="1200" height="7137" loading="lazy" decoding="async" alt="Halaman utama toko Citra SR12 di Shopee versi website, berisi voucher, banner promo, dan etalase produk"></div><figcaption class="tcap">Halaman utama toko<small>Scroll di dalam bingkai &middot; klik untuk memperbesar</small></figcaption></figure><figure class="tdev"><div class="tbar"><i></i><i></i><i></i><span>shopee.co.id/citrasr12</span></div><div class="tview"><img src="images/toko/web-2.webp" width="592" height="1280" loading="lazy" decoding="async" alt="Banner perbedaan manfaat dan etalase kesehatan diri toko Citra SR12 di Shopee"></div><figcaption class="tcap">Banner &amp; etalase produk<small>Scroll di dalam bingkai &middot; klik untuk memperbesar</small></figcaption></figure></div><div class="vdots"></div></div>
+<div class="tpanel" id="t-hp" role="tabpanel"><div class="tslide hp"><figure class="tdev"><div class="tphone"><img src="images/toko/hp-1.webp" width="602" height="1280" loading="lazy" decoding="async" alt="Beranda toko Citra SR12 di Shopee versi ponsel"></div><figcaption class="tcap">Beranda toko<small>Ketuk untuk memperbesar</small></figcaption></figure><figure class="tdev"><div class="tphone"><img src="images/toko/hp-2.webp" width="606" height="1280" loading="lazy" decoding="async" alt="Banner dan produk terlaris toko Citra SR12 di Shopee versi ponsel"></div><figcaption class="tcap">Produk terlaris<small>Ketuk untuk memperbesar</small></figcaption></figure><figure class="tdev"><div class="tphone"><img src="images/toko/hp-3.webp" width="592" height="1280" loading="lazy" decoding="async" alt="Banner perbedaan manfaat dan etalase kesehatan diri toko Citra SR12 versi ponsel"></div><figcaption class="tcap">Banner &amp; etalase<small>Ketuk untuk memperbesar</small></figcaption></figure></div><div class="vdots"></div></div>
+<div class="tzv" id="tzv" role="dialog" aria-modal="true" aria-label="Pratinjau tampilan toko"><button type="button" id="tzx" aria-label="Tutup">&times;</button><div class="tzs"><img alt=""></div></div>
 </div></section>
 
 <section id="ops"><div class="wrap">
@@ -443,7 +491,7 @@ section .wrap{position:relative;z-index:1}
 /* ====== PUSAT PENGATURAN: edit bagian ini saja ====== */
 var CFG={
  phone:"+62895340911029", phoneShow:"+62-895-3409-11029", email:"mr.andikaws@gmail.com",
- profile:"profil.jpg?v=2", // jalur foto profil (file ada di folder yang sama dengan index.html)
+ profile:"profil.jpg?v=3", // jalur foto profil (file ada di folder yang sama dengan index.html)
  works:[ // 5 kategori = 5 kartu. cover = foto sampul kartu, items = [foto, lebar, tinggi] yang tampil di pop-up
   {title:"3D Modeling",
    desc:"Karakter, kostum, rambut bergaya anime, hingga candi, kapal, dan diorama kecil, dimodelkan satu per satu di Blender dengan detail yang cermat.",
@@ -659,7 +707,7 @@ document.querySelectorAll(".skill,.stat,.cd,.vid").forEach(function(el){el.class
 document.addEventListener("pointermove",function(e){if(!fine||!e.target.closest)return;var el=e.target.closest(".sp,.portrait");if(!el)return;var r=el.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;el.style.setProperty("--mx",x+"px");el.style.setProperty("--my",y+"px");if(!reduce&&(el.classList.contains("skill")||el.classList.contains("portrait")))el.style.transform="perspective(800px) rotateY("+((x/r.width-.5)*8)+"deg) rotateX("+(-(y/r.height-.5)*8)+"deg) translateY(-3px)"});
 document.addEventListener("pointerout",function(e){var el=e.target.closest&&e.target.closest(".skill,.portrait");if(el&&!el.contains(e.relatedTarget))el.style.transform=""});
 var links={};document.querySelectorAll("nav a").forEach(function(a){links[a.getAttribute("href")]=a});
-var MAP=[["hero","#hero"],["about","#about"],["expertise","#about"],["works","#works"],["video","#works"],["ops","#works"],["process","#works"],["contact","#contact"],["partner","#contact"]];
+var MAP=[["hero","#hero"],["about","#about"],["expertise","#about"],["works","#works"],["video","#works"],["toko","#works"],["ops","#works"],["process","#works"],["contact","#contact"],["partner","#contact"]];
 function setNav(){var y=innerHeight*.4,cur="#hero";MAP.forEach(function(m){var e=document.getElementById(m[0]);if(e&&e.getBoundingClientRect().top<=y)cur=m[1]});if(innerHeight+scrollY>=document.documentElement.scrollHeight-4)cur="#contact";for(var k in links)links[k].classList.toggle("active",k==cur)}
 addEventListener("scroll",setNav,{passive:true});addEventListener("resize",setNav);setNav();
 var tt=document.getElementById("totop"),ring=tt.querySelector("circle"),o1=document.getElementById("o1"),o2=document.getElementById("o2");
@@ -715,15 +763,28 @@ var sh="";for(var i=0;i<3;i++)sh+='<i class="shoot" aria-hidden="true" style="--
 hero.insertAdjacentHTML("afterbegin",sh);
 if(fine&&!reduce){var lt=0;addEventListener("pointermove",function(e){var n=performance.now();if(n-lt<70)return;lt=n;var d=document.createElement("i");d.className="spk trail";d.style.cssText="position:fixed!important;pointer-events:none;left:"+(e.clientX+R()*16-8)+"px;top:"+(e.clientY+R()*16-8)+"px;--c:"+C[(R()*5)|0]+";--sz:"+(8+R()*10)+"px";document.body.appendChild(d);setTimeout(function(){d.remove()},900)})}
 })();
-/* ===== v12: video geser (swipe) dengan kartu aktif ===== */
-(function(){var v=document.getElementById("vids"),d=document.getElementById("vdots");if(!v||!d)return;
-function cards(){return[].slice.call(v.querySelectorAll(".vid"))}
-function build(){d.innerHTML=cards().map(function(){return"<i></i>"}).join("");[].forEach.call(d.children,function(e,n){e.addEventListener("click",function(){var c=cards()[n];v.scrollTo({left:c.offsetLeft-(v.clientWidth-c.offsetWidth)/2,behavior:reduce?"auto":"smooth"})})})}
-function upd(){var c=cards(),m=v.scrollLeft+v.clientWidth/2,b=0,bd=1e9;c.forEach(function(e,n){var x=Math.abs(e.offsetLeft+e.offsetWidth/2-m);if(x<bd){bd=x;b=n}});
+/* ===== v13: slider generik (video & tampilan toko) + tab + penampil ===== */
+(function(){
+function slider(v,d,sel){if(!v||!d)return;
+function cards(){return[].slice.call(v.querySelectorAll(sel))}
+d.innerHTML=cards().map(function(){return"<i></i>"}).join("");
+[].forEach.call(d.children,function(e,n){e.addEventListener("click",function(){var c=cards()[n];v.scrollTo({left:c.offsetLeft-(v.clientWidth-c.offsetWidth)/2,behavior:reduce?"auto":"smooth"})})});
+function upd(){var c=cards(),ov=v.scrollWidth>v.clientWidth+4,m=v.scrollLeft+v.clientWidth/2,b=0,bd=1e9;c.forEach(function(e,n){var x=Math.abs(e.offsetLeft+e.offsetWidth/2-m);if(x<bd){bd=x;b=n}});
 c.forEach(function(e,n){e.classList.toggle("on",n===b)});[].forEach.call(d.children,function(e,n){e.classList.toggle("on",n===b)});
-d.style.display=v.scrollWidth>v.clientWidth+4?"flex":"none";v.classList.toggle("slide",v.scrollWidth>v.clientWidth+4)}
+d.style.display=ov?"flex":"none";v.classList.toggle("slide",ov)}
 var t=0;v.addEventListener("scroll",function(){if(!t){t=1;requestAnimationFrame(function(){t=0;upd()})}},{passive:true});
-addEventListener("resize",upd);addEventListener("load",upd);build();upd()})();
+addEventListener("resize",upd);addEventListener("load",upd);upd()}
+slider(document.getElementById("vids"),document.getElementById("vdots"),".vid");
+var tw=document.querySelector("#t-web .tslide"),th=document.querySelector("#t-hp .tslide");
+slider(tw,document.querySelector("#t-web .vdots"),".tdev");slider(th,document.querySelector("#t-hp .vdots"),".tdev");
+var tb=[].slice.call(document.querySelectorAll(".ttabs button")),pn={web:document.getElementById("t-web"),hp:document.getElementById("t-hp")};
+tb.forEach(function(b){b.addEventListener("click",function(){tb.forEach(function(x){var on=x===b;x.classList.toggle("on",on);x.setAttribute("aria-selected",on)});for(var k in pn)pn[k].classList.toggle("on",k===b.dataset.t);dispatchEvent(new Event("resize"))})});
+var z=document.getElementById("tzv"),zi=z.querySelector("img");document.body.appendChild(z);
+function cl(){z.classList.remove("on");document.body.style.overflow=""}
+document.addEventListener("click",function(e){var im=e.target.closest&&e.target.closest(".tview img,.tphone img");
+if(im){zi.src=im.currentSrc||im.src;zi.alt=im.alt;z.className="tzv on "+(im.closest(".tphone")?"hp":"web");z.querySelector(".tzs").scrollTop=0;document.body.style.overflow="hidden";return}
+if(z.classList.contains("on")&&z.contains(e.target)&&e.target.tagName!=="IMG")cl()});
+addEventListener("keydown",function(e){if(e.key==="Escape")cl()})})();
 </script>
 </body>
 </html>
