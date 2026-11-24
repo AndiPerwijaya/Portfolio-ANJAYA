@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ANJAYA — Portfolio</title>
+<title>ANJAYA — Portofolio Desainer Grafis, 3D Modeler &amp; Video Editor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0710;--surface:#15101f;--line:#2a2140;--text:#ece8f7;--muted:#9a90b5;--p1:#7c3aed;--p2:#a78bfa;--p3:#c4b5fd;
+:root{--bg:#fdf8ff;--surface:#ffffff;--line:#e7dcf7;--text:#2b2347;--muted:#6b628a;--p1:#8b5cf6;--p2:#a78bfa;--p3:#6d28d9;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark}}
+:root{color-scheme:light}
 html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.7 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -239,35 +239,175 @@ nav a.active{color:#fff;background:rgba(124,58,237,.38);box-shadow:0 0 18px rgba
 .tic{flex:none;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font:800 11px Manrope,sans-serif;letter-spacing:-.02em}
 .tic.img{background:rgba(255,255,255,.07);padding:3px}.tic.img img{width:100%;height:100%;object-fit:contain}
 .xc .go{margin-top:16px}
+
+/* ===== v7: tema cerah & imajinatif ===== */
+body{background:linear-gradient(180deg,#e4f2ff 0%,#fbf1ff 28%,#fff4ea 58%,#f0ebff 100%);color:var(--text)}
+.orb{opacity:.55}#o1{background:radial-gradient(circle,#f9a8d4,transparent 66%)}#o2{background:radial-gradient(circle,#7dd3fc,transparent 66%)}
+.glow{background:radial-gradient(circle,rgba(236,72,153,.16),transparent 65%)}
+header .wrap{background:rgba(255,255,255,.78);box-shadow:0 10px 34px rgba(139,92,246,.18),0 0 0 1px rgba(139,92,246,.06)}
+header.sc .wrap{background:rgba(255,255,255,.93)}
+nav a:hover{background:rgba(139,92,246,.1)}nav a.active{color:#fff;background:linear-gradient(135deg,#8b5cf6,#ec4899);box-shadow:0 6px 18px rgba(139,92,246,.35)}
+.hero::before{background:radial-gradient(circle,rgba(125,211,252,.6),rgba(244,114,182,.38) 45%,transparent 68%)}
+.hero h1{background:linear-gradient(135deg,#7c3aed 5%,#ec4899 52%,#0ea5e9 98%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.spk{position:absolute!important;width:var(--sz);height:var(--sz);background:var(--c);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);animation:twk 3.6s ease-in-out infinite;pointer-events:none;z-index:0}
+@keyframes twk{0%,100%{opacity:.2;transform:scale(.5) rotate(0)}50%{opacity:1;transform:scale(1) rotate(50deg)}}
+.btn.fill{color:#fff;background:linear-gradient(135deg,#8b5cf6,#ec4899);border-color:transparent}
+.btn.glowb{color:var(--p3);background:rgba(255,255,255,.7);box-shadow:0 6px 20px rgba(139,92,246,.2)}
+.btn:hover{background:var(--p3);color:#fff;border-color:var(--p3)}
+.pick button{background:rgba(255,255,255,.75);color:var(--text)}.pick button:hover{background:#fff}
+.stat,.skill,.pl,.cd{background:#fff;box-shadow:0 8px 26px rgba(139,92,246,.1)}
+.skill.xc{background:linear-gradient(160deg,#fff,#faf3ff)}
+.skill:hover{box-shadow:0 16px 40px rgba(236,72,153,.18)}.vid:hover{box-shadow:0 18px 40px rgba(139,92,246,.2)}
+.cd{background:rgba(255,255,255,.8)}
+.chip,.xc .chip{background:rgba(139,92,246,.09);border:1px solid rgba(139,92,246,.3);color:var(--p3);box-shadow:none}
+.chip:hover{background:rgba(236,72,153,.14)}
+.ic{background:linear-gradient(135deg,#f3e8ff,#e0f2fe);border-color:#d8c8fb;box-shadow:0 6px 16px rgba(139,92,246,.18)}.ic svg{stroke:var(--p3)}
+.f{background:rgba(139,92,246,.2);border:1px solid rgba(124,58,237,.45);box-shadow:inset 0 0 18px rgba(236,72,153,.2)}.f svg{stroke:#6d28d9}
+.about{grid-template-columns:200px 1fr;align-items:center;gap:44px}
+.about .portrait{width:200px;height:200px;min-height:0;aspect-ratio:1;max-width:none;border-radius:50%;border:5px solid #fff;padding:0;background:linear-gradient(135deg,#f9a8d4,#a78bfa,#7dd3fc);box-shadow:0 0 0 2px #e4d4fb,0 18px 44px rgba(139,92,246,.3);overflow:hidden}
+.about .portrait img{border-radius:50%;object-position:50% 22%!important}
+.portrait:hover{box-shadow:0 0 0 2px var(--p2),0 22px 54px rgba(236,72,153,.32)}
+@media (max-width:860px){.about{grid-template-columns:1fr;justify-items:center;text-align:center}.about .portrait{width:170px;height:170px;max-width:none;aspect-ratio:1}.about .eyebrow{justify-content:center}.about .lead{margin-inline:auto}}
+.tile figcaption{color:#fff;background:linear-gradient(transparent,rgba(46,24,92,.85))}.tile figcaption small{color:#e9d5ff}
+.wcard{color:#fff}.wcard::after{background:linear-gradient(180deg,rgba(46,24,92,.05) 0%,rgba(46,24,92,.3) 45%,rgba(46,24,92,.78))}
+.wcard img{filter:blur(7px) brightness(.82) saturate(1.05)}.wcard:hover img{filter:blur(7px) brightness(.95) saturate(1.1)}
+.wno{color:var(--p3);background:rgba(255,255,255,.78);border-color:transparent}.wct{color:#f5e8ff}
+.wcard:hover,.wcard:focus-visible{box-shadow:0 22px 50px rgba(236,72,153,.28)}
+.wm{background:rgba(70,50,120,.35)}
+.wmp{background:linear-gradient(160deg,#fff,#f6f0ff 60%,#eaf6ff);box-shadow:0 40px 100px rgba(70,40,140,.3)}
+.wmx{background:#fff;color:var(--text)}.wmc{background:rgba(139,92,246,.1);box-shadow:none}
+.lb{background:rgba(40,25,70,.9)}.lb p{color:#fff}.lb #lbx{color:#fff}.lb .lbn{background:rgba(255,255,255,.92);color:var(--text)}
+.contact{background:radial-gradient(ellipse at top,rgba(244,114,182,.28),rgba(125,211,252,.18) 45%,#fff 80%);box-shadow:0 20px 60px rgba(139,92,246,.14)}
+.top{background:rgba(255,255,255,.95)}.toast{background:var(--p1);color:#fff}
+.mq{mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+header .logo{color:var(--p3)}
+/* tools + tingkat keahlian */
+.xtr{flex-direction:column;gap:8px}
+.tool{display:grid;grid-template-columns:26px 1fr auto;align-items:center;gap:2px 10px;width:100%;padding:8px 12px 8px 8px;border-radius:14px;background:rgba(139,92,246,.05)}
+.tool .tn{font-weight:600;font-size:13.5px}.tool .lvl{font:700 12px Manrope,sans-serif;color:var(--p3)}
+.lvb{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:5px}
+.lvb i{height:5px;border-radius:4px;background:#e9e1fa}.lvb i.on{background:linear-gradient(90deg,#8b5cf6,#ec4899)}
+@media (prefers-reduced-motion:reduce){.spk{animation:none}}
+.credit{margin:0 0 26px;max-width:640px;font-size:13px;color:var(--p3);background:rgba(139,92,246,.08);border:1px dashed rgba(139,92,246,.35);border-radius:12px;padding:8px 14px}
+.wcr{margin:12px 0 0;font-size:12.5px;color:var(--muted)}
+
+/* ===== v8: kubus cerah, bintang & kilatan cahaya ===== */
+.f{background:linear-gradient(135deg,rgba(244,114,182,.62),rgba(167,139,250,.55) 50%,rgba(56,189,248,.62));border:1px solid rgba(255,255,255,.9);box-shadow:inset 0 0 18px rgba(255,255,255,.6),0 0 16px rgba(167,139,250,.5)}
+.cube:nth-child(3n+2) .f{background:linear-gradient(135deg,rgba(56,189,248,.62),rgba(134,239,216,.55) 55%,rgba(167,139,250,.6))}
+.cube:nth-child(3n) .f{background:linear-gradient(135deg,rgba(252,211,77,.6),rgba(249,168,212,.6) 55%,rgba(196,181,253,.6))}
+.f svg{stroke:#fff;stroke-width:2;filter:drop-shadow(0 0 4px rgba(190,70,160,.75))}
+section .wrap{position:relative;z-index:1}
+.sky{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.flr{position:absolute;width:var(--sz);height:var(--sz);border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,#fff 0 14%,var(--c) 16% 30%,transparent 64%);filter:drop-shadow(0 0 7px var(--c));opacity:0;animation:flash 5s ease-in-out infinite}
+.flr::before,.flr::after{content:"";position:absolute;left:50%;top:50%;width:320%;height:2px;background:linear-gradient(90deg,transparent,var(--c),#fff 50%,var(--c),transparent);transform:translate(-50%,-50%)}
+.flr::after{transform:translate(-50%,-50%) rotate(90deg)}
+@keyframes flash{0%,58%,100%{opacity:0;transform:scale(.2) rotate(0)}70%{opacity:1;transform:scale(1) rotate(20deg)}84%{opacity:.35;transform:scale(.65) rotate(40deg)}}
+.shoot{position:absolute;left:var(--x);top:var(--y);width:130px;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--c));box-shadow:0 0 10px var(--c);opacity:0;pointer-events:none;animation:shoot 8s ease-in infinite}
+@keyframes shoot{0%{opacity:0;transform:translate(0,0) rotate(25deg)}3%{opacity:1}13%{opacity:0;transform:translate(300px,140px) rotate(25deg)}100%{opacity:0}}
+.trail{animation:trail .9s ease-out forwards!important;z-index:80!important;opacity:1}
+@keyframes trail{0%{opacity:1;transform:scale(1) rotate(0)}100%{opacity:0;transform:translateY(18px) scale(.2) rotate(120deg)}}
+.stat::after,.skill::after,.cd::after,.vid::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.9) 50%,transparent 62%);transform:translateX(-130%);pointer-events:none}
+.stat:hover::after,.skill:hover::after,.cd:hover::after,.vid:hover::after{transition:transform .9s ease;transform:translateX(130%)}
+@media (prefers-reduced-motion:reduce){.flr,.shoot{animation:none;opacity:0}}
+
+/* ===== v9: logo mitra jelas & ikon software ===== */
+.pl.lg.dk{background:linear-gradient(135deg,#2f1c5c,#171030);border-color:#4a3a86;box-shadow:0 8px 22px rgba(60,30,120,.28)}
+.pl.lg.dk:hover{border-color:#c4b5fd;box-shadow:0 0 0 1px #a78bfa,0 10px 28px rgba(139,92,246,.45)}
+.pl.lg{box-shadow:0 8px 22px rgba(139,92,246,.12)}
+.tool{grid-template-columns:34px 1fr auto}
+.tic{width:34px;height:34px;border-radius:10px;font-size:12px}
+.tic.img{background:#fff;border:1px solid #e7dcf7;padding:5px;box-shadow:0 3px 10px rgba(139,92,246,.15)}
+
+/* ===== v10: awan kecil di latar & lapisan parallax ===== */
+.px{position:absolute;top:0;will-change:transform}
+.px>i{position:absolute;left:0;top:0}
+.cld{width:var(--w)!important;height:calc(var(--w)*.3)!important;border-radius:99px;background:#fff;opacity:.85;filter:blur(3px);animation:cdrift 90s ease-in-out infinite alternate}
+.cld::before,.cld::after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cld::before{left:16%;bottom:38%;width:40%;height:140%}
+.cld::after{left:46%;bottom:30%;width:34%;height:110%}
+@keyframes cdrift{from{transform:translateX(-40px)}to{transform:translateX(60px)}}
+@media (prefers-reduced-motion:reduce){.cld{animation:none}}
+
+/* ===== v11: video carousel ===== */
+.videos{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:14px 4px 18px;scrollbar-width:thin;scrollbar-color:#c4b5fd transparent;overscroll-behavior-x:contain}
+.videos::-webkit-scrollbar{height:8px}.videos::-webkit-scrollbar-thumb{background:#c4b5fd;border-radius:8px}.videos::-webkit-scrollbar-track{background:transparent}
+.videos .vid{flex:0 0 min(290px,76vw);scroll-snap-align:center}
+.videos .vid.wide{flex-basis:min(520px,88vw)}
+.videos iframe,.videos video{max-width:100%}
+
+/* ===== v12: carousel video ala slide ===== */
+.videos .vid{transition:transform .25s ease-out,scale .4s ease,filter .4s ease,border-color .25s,box-shadow .25s}
+.videos.slide .vid:not(.on){scale:.94;filter:saturate(.75) brightness(.98)}
+.vdots{display:none;justify-content:center;gap:8px;margin-top:2px}
+.vdots i{width:8px;height:8px;border-radius:8px;background:#d9ccf7;cursor:pointer;transition:width .3s,background .3s}
+.vdots i.on{width:26px;background:linear-gradient(90deg,#8b5cf6,#ec4899)}
+@media (max-width:860px){.videos{padding-inline:calc(50% - min(145px,38vw))}}
+
+/* ===== v13: tampilan toko online ===== */
+.ttabs{display:inline-flex;gap:4px;padding:5px;margin:8px 0 24px;border-radius:99px;background:rgba(255,255,255,.85);border:1px solid var(--line);box-shadow:0 8px 24px rgba(139,92,246,.14)}
+.ttabs button{display:inline-flex;align-items:center;gap:8px;border:0;background:none;padding:10px 22px;border-radius:99px;font:600 14px/1 inherit;font-family:inherit;color:var(--muted);cursor:pointer;transition:color .25s,background .25s,box-shadow .25s}
+.ttabs button:hover{color:var(--p3)}
+.ttabs button.on{color:#fff;background:linear-gradient(135deg,#8b5cf6,#ec4899);box-shadow:0 6px 18px rgba(139,92,246,.4)}
+.tpanel{display:none}.tpanel.on{display:block;animation:tin .5s ease}
+@keyframes tin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.tslide{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:12px 4px 16px;scrollbar-width:none;overscroll-behavior-x:contain}
+.tslide::-webkit-scrollbar{display:none}
+.tslide.web .tdev{flex:1 1 0;min-width:0}
+.tslide.hp{justify-content:safe center}
+.tslide.hp .tdev{flex:0 0 250px}
+.tdev{margin:0;scroll-snap-align:center;transition:scale .4s ease,filter .4s ease}
+.tslide.slide .tdev:not(.on){scale:.94;filter:saturate(.75)}
+.tbar{display:flex;align-items:center;gap:7px;height:36px;padding:0 14px;border-radius:16px 16px 0 0;background:linear-gradient(180deg,#fff,#f6f0ff);border:1px solid var(--line);border-bottom:0}
+.tbar i{width:10px;height:10px;border-radius:50%;background:#f9a8d4}.tbar i:nth-child(2){background:#fcd34d}.tbar i:nth-child(3){background:#86efd8}
+.tbar span{margin-left:8px;flex:1;max-width:260px;padding:4px 12px;border-radius:99px;background:#fff;border:1px solid var(--line);font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tview{height:540px;overflow-y:auto;border:1px solid var(--line);border-radius:0 0 16px 16px;background:#fff;box-shadow:0 18px 44px rgba(139,92,246,.2);scrollbar-width:thin;scrollbar-color:#c4b5fd transparent;overscroll-behavior:contain}
+.tview::-webkit-scrollbar{width:8px}.tview::-webkit-scrollbar-thumb{background:#c4b5fd;border-radius:8px}
+.tview img{display:block;width:100%;height:auto;cursor:zoom-in}
+.tphone{padding:7px;border-radius:32px;background:linear-gradient(135deg,#f9a8d4,#a78bfa 55%,#7dd3fc);box-shadow:0 18px 44px rgba(139,92,246,.3),0 0 0 1px rgba(255,255,255,.7) inset}
+.tphone img{display:block;width:100%;height:auto;border-radius:25px;cursor:zoom-in;background:#fff}
+.tcap{margin-top:12px;text-align:center;font-weight:600;font-size:14px}
+.tcap small{display:block;margin-top:2px;font-weight:400;font-size:12px;color:var(--muted)}
+.tzv{position:fixed;inset:0;z-index:100;background:rgba(40,25,70,.93);display:none}
+.tzv.on{display:block}
+.tzs{height:100%;overflow:auto;padding:58px 12px 28px;text-align:center}
+.tzv img{display:inline-block;box-shadow:0 20px 60px rgba(0,0,0,.45);cursor:zoom-out;background:#fff}
+.tzv.web img{width:min(1200px,96vw);height:auto;border-radius:10px}
+.tzv.hp img{height:calc(100vh - 90px);width:auto;max-width:96vw;border-radius:22px}
+#tzx{position:fixed;top:14px;right:16px;z-index:101;width:42px;height:42px;border-radius:50%;border:0;background:#fff;color:var(--p3);font-size:26px;line-height:1;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+@media (max-width:860px){
+.tslide{padding-inline:calc(50% - min(44vw,150px))}
+.tslide.web .tdev{flex:0 0 min(88vw,320px)}
+.tslide.hp{justify-content:flex-start}.tslide.hp .tdev{flex:0 0 min(250px,68vw)}
+.tview{height:430px}
+}
 </style>
 <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
 <div class="bar" id="bar"></div><div class="glow" id="glow"></div><div class="orb" id="o1"></div><div class="orb" id="o2"></div>
 <header><div class="wrap"><a class="logo" href="#top">ANJAYA</a>
-<nav><a href="#hero">Home</a><a href="#about">About</a><a href="#works">Works</a><a href="#contact">Contact</a></nav></div></header>
+<nav><a href="#hero">Beranda</a><a href="#about">Tentang</a><a href="#works">Karya</a><a href="#contact">Kontak</a></nav></div></header>
 
 <main id="top">
 <div class="hero" id="hero"><div class="stage" id="stage" aria-hidden="true"></div><div class="wrap">
 <div class="eyebrow hk">Graphic Designer / 3D Modeler / Video Editor</div>
 <h1>ANJAYA</h1>
-<p>Graphic designer, 3D modeler, video editor, and e-commerce brand manager. From visuals to warehouse stock, I handle it all.</p>
-<div class="btns"><a class="btn fill" href="#works">View Works <span aria-hidden="true">&rarr;</span></a><a class="btn glowb" href="#about">About Me</a></div>
-<div class="pick"><span>I'm looking for</span><button data-pick="Graphic Design">Graphic Design</button><button data-pick="3D Modeling">3D Modeling</button><button data-pick="3D Printing Asset">3D Printing Asset</button><button data-pick="video">Video Editing</button><button data-pick="Onlineshop Campaign">E-commerce &amp; Brand</button></div>
+<p>Mewujudkan gagasan menjadi karya visual yang bermakna: dari desain grafis, model 3D, dan video, hingga pengelolaan toko online. Dikerjakan dengan teliti, dari konsep sampai hasil akhir.</p>
+<div class="btns"><a class="btn fill" href="#works">Lihat Portofolio <span aria-hidden="true">&rarr;</span></a><a class="btn glowb" href="#about">Tentang Saya</a></div>
+<div class="pick"><span>Jelajahi layanan:</span><button data-pick="Graphic Design">Graphic Design</button><button data-pick="3D Modeling">3D Modeling</button><button data-pick="3D Printing Asset">3D Printing Asset</button><button data-pick="video">Video Editing</button><button data-pick="Onlineshop Campaign">E-commerce &amp; Brand</button></div>
 
 </div></div>
 
 <section id="about"><div class="wrap">
 <div class="about">
-<div class="portrait" id="portrait">Add your profile photo here</div>
+<div class="portrait" id="portrait">Foto profil</div>
 <div>
-<div class="eyebrow">About</div>
-<h2>Hi, I'm Anjaya.</h2>
-<p class="lead" style="margin-bottom:0">I turn ideas into impactful visual experiences and meaningful digital solutions, combining creativity with strategic thinking to bring concepts to life. My approach bridges design and business, creating work that not only looks great but also delivers value, strengthens brand identity, and supports long-term growth.</p>
+<h2>Halo, saya Anjaya.</h2>
+<p class="lead" style="margin-bottom:0">Bagi saya, desain yang baik tidak hanya indah dipandang, tetapi juga mampu membangun kepercayaan dan mendukung tujuan bisnis. Karena itu, selain berkarya secara visual, saya turut memahami proses di balik sebuah brand, mulai dari tampilan produk, iklan, hingga pengelolaan stok. Hasilnya adalah karya yang menarik sekaligus bermanfaat bagi pertumbuhan usaha Anda.</p>
 <div class="stats">
-<div class="stat"><b>3+</b><span>Years of Experience</span></div>
-<div class="stat"><b>100+</b><span>Projects Completed</span></div>
-<div class="stat"><b>35+</b><span>Clients</span></div>
+<div class="stat"><b>3+</b><span>Tahun Berkarya</span></div>
+<div class="stat"><b>100+</b><span>Proyek Selesai</span></div>
+<div class="stat"><b>35+</b><span>Klien Terlayani</span></div>
 </div>
 
 </div></div>
@@ -275,75 +415,86 @@ nav a.active{color:#fff;background:rgba(124,58,237,.38);box-shadow:0 0 18px rgba
 </div></section>
 
 <section id="expertise"><div class="wrap">
-<div class="xh"><div><div class="eyebrow">Expertise &amp; Services</div><h2 style="margin:0">Personal Skills</h2></div>
-<div class="xcat"><a href="#works" data-pick="Graphic Design">Design</a><i>/</i><a href="#works" data-pick="3D Modeling">3D</a><i>/</i><a href="#video" data-pick="video">Video</a><i>/</i><a href="#works" data-pick="Onlineshop Campaign">E-commerce</a></div></div>
+<div class="xh"><div><div class="eyebrow">Keahlian &amp; Layanan</div><h2 style="margin:0">Dari Visual hingga Penjualan</h2></div>
+<div class="xcat"><a href="#works" data-pick="Graphic Design">Desain</a><i>/</i><a href="#works" data-pick="3D Modeling">3D</a><i>/</i><a href="#video" data-pick="video">Video</a><i>/</i><a href="#works" data-pick="Onlineshop Campaign">E-commerce</a></div></div>
 <div class="xgrid">
-<div class="skill xc" data-pick="Graphic Design" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1z"/><path d="M14 7l3 3"/></svg></div><div><h3>Graphic Design</h3><p>Product design, branding, campaign, and promotional materials.</p><div class="chips"><span class="chip">T-Shirt</span><span class="chip">Thumbnail</span><span class="chip">Branding</span><span class="chip">Social Media</span><span class="chip">Campaign</span></div><span class="go">View Works <i>&rarr;</i></span></div></div>
-<div class="skill xc" data-pick="3D Modeling" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5v-9z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg></div><div><h3>3D Modeling</h3><p>Characters, props, and environments built in Blender.</p><div class="chips"><span class="chip">Product</span><span class="chip">Asset</span><span class="chip">3D Viewer</span><span class="chip">Character</span><span class="chip">Architecture</span></div><span class="go">View Works <i>&rarr;</i></span></div></div>
-<div class="skill xc" data-pick="3D Printing Asset" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 20h14"/><path d="M7 20v-3h10v3"/><path d="M9 17V8l3-4 3 4v9"/><path d="M9 12h6"/></svg></div><div><h3>3D Printing Asset</h3><p>Printable models: charms, keychains, figurines, and functional parts.</p><div class="chips"><span class="chip">3D Printing</span><span class="chip">Clicker</span><span class="chip">Toys</span><span class="chip">Tools</span><span class="chip">Figurine</span><span class="chip">Keychain</span></div><span class="go">View Works <i>&rarr;</i></span></div></div>
-<div class="skill xc" data-pick="video" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg></div><div><h3>Video Editing</h3><p>Short videos, product reels, and social media content.</p><div class="chips"><span class="chip">Short Video</span><span class="chip">Clipping</span><span class="chip">Advertising</span><span class="chip">Showcase</span></div><span class="go">View Works <i>&rarr;</i></span></div></div>
-<div class="skill xc" data-pick="Onlineshop Campaign" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a2.5 2.5 0 005 0 2.5 2.5 0 006 0 2.5 2.5 0 005 0"/><path d="M5 12v8h14v-8"/><path d="M10 20v-5h4v5"/></svg></div><div><h3>E-commerce &amp; Brand</h3><p>Marketplace management, ads, and brand identity, backed by daily operations from catalog to stock.</p><div class="chips"><span class="chip">Advertising</span><span class="chip">Branding</span><span class="chip">Omnichannel</span><span class="chip">Product SKU</span><span class="chip">Listing</span><span class="chip">Campaign</span><span class="chip">Promotion</span><span class="chip">Affiliate</span><span class="chip">Stock Control</span></div><span class="go">View Works <i>&rarr;</i></span></div></div>
+<div class="skill xc" data-pick="Graphic Design" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1z"/><path d="M14 7l3 3"/></svg></div><div><h3>Graphic Design</h3><p>Visual yang memperkuat identitas dan daya tarik produk, mulai dari desain kaos dan thumbnail hingga identitas brand yang utuh.</p><div class="chips"><span class="chip">T-Shirt</span><span class="chip">Thumbnail</span><span class="chip">Branding</span><span class="chip">Media Sosial</span><span class="chip">Kampanye</span></div><span class="go">Lihat karya <i>&rarr;</i></span></div></div>
+<div class="skill xc" data-pick="3D Modeling" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5v-9z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg></div><div><h3>3D Modeling</h3><p>Karakter, properti, hingga suasana 3D yang detail dan hidup, dimodelkan dengan cermat di Blender.</p><div class="chips"><span class="chip">Produk</span><span class="chip">Aset</span><span class="chip">Karakter</span><span class="chip">Arsitektur</span></div><span class="go">Lihat karya <i>&rarr;</i></span></div></div>
+<div class="skill xc" data-pick="3D Printing Asset" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 20h14"/><path d="M7 20v-3h10v3"/><path d="M9 17V8l3-4 3 4v9"/><path d="M9 12h6"/></svg></div><div><h3>3D Printing Asset</h3><p>Model yang dirancang agar optimal saat dicetak: charm, gantungan kunci, figurin, hingga komponen fungsional.</p><div class="chips"><span class="chip">3D Printing</span><span class="chip">Clicker</span><span class="chip">Mainan</span><span class="chip">Figurine</span><span class="chip">Keychain</span></div><span class="go">Lihat karya <i>&rarr;</i></span></div></div>
+<div class="skill xc" data-pick="video" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg></div><div><h3>Video Editing</h3><p>Video pendek yang menarik dan terarah: reels produk, iklan, dan konten media sosial dengan alur yang rapi.</p><div class="chips"><span class="chip">Video Pendek</span><span class="chip">Clipping</span><span class="chip">Periklanan</span><span class="chip">Showcase</span></div><span class="go">Lihat karya <i>&rarr;</i></span></div></div>
+<div class="skill xc" data-pick="Onlineshop Campaign" tabindex="0" role="link"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a2.5 2.5 0 005 0 2.5 2.5 0 006 0 2.5 2.5 0 005 0"/><path d="M5 12v8h14v-8"/><path d="M10 20v-5h4v5"/></svg></div><div><h3>E-commerce &amp; Brand</h3><p>Pengelolaan toko online secara menyeluruh, mulai dari katalog, iklan, promo, hingga stok, untuk mendukung penjualan dan memperkuat brand.</p><div class="chips"><span class="chip">Periklanan</span><span class="chip">Branding</span><span class="chip">Omnichannel</span><span class="chip">Product SKU</span><span class="chip">Listing</span><span class="chip">Kampanye</span><span class="chip">Promosi</span><span class="chip">Affiliate</span><span class="chip">Kontrol Stok</span></div><span class="go">Lihat karya <i>&rarr;</i></span></div></div>
 </div>
 </div></section>
 
 <section id="works"><div class="wrap">
-<div class="wh"><div><div class="eyebrow">Portfolio</div><h2>Works</h2>
-<p class="lead">Pick a collection to open its projects.</p></div><div class="viewer" id="viewer" aria-hidden="true"><div class="vbox" id="vbox"></div><small>Drag to Rotate</small></div></div>
+<div class="wh"><div><div class="eyebrow">Portofolio</div><h2>Proyek Kolaborasi dengan Klien</h2>
+<p class="lead">Setiap koleksi lahir dari kebutuhan klien yang nyata. Silakan pilih satu koleksi untuk melihat karyanya.</p><p class="credit">Seluruh karya pada halaman ini merupakan hasil kerja sama dengan klien, dan hak kepemilikannya berada pada masing-masing klien.</p></div><div class="viewer" id="viewer" aria-hidden="true"><div class="vbox" id="vbox"></div><small>Geser untuk Memutar</small></div></div>
 <div class="wcards" id="wcards"></div>
 </div></section>
 
 <section id="video"><div class="wrap">
-<h2>Video Editing</h2>
-<p class="lead">Three selected video samples.</p>
-<div class="videos" id="vids">
+<h2>Video yang Bercerita</h2>
+<p class="lead" style="margin-bottom:10px">Video-video pilihan dengan alur yang dirangkai agar penonton tetap tertarik hingga akhir.</p><p class="credit">Video-video ini merupakan hasil kerja sama dengan klien, dan kreditnya milik masing-masing klien.</p>
+<div class="videos" id="vids" aria-label="Daftar video, geser ke kanan atau kiri">
 <div class="vid"><div class="scr"><span class="play"></span></div><div class="t">Product Ad<small>Premiere &middot; 0:45</small></div></div>
 <div class="vid"><div class="scr"><span class="play"></span></div><div class="t">Brand Campaign Video<small>Premiere &middot; 1:20</small></div></div>
 <div class="vid short"><div class="scr"><span class="play"></span></div><div class="t">Short-Form Reels Video<small>CapCut &middot; 0:20</small></div></div>
 </div>
+<div class="vdots" id="vdots" aria-hidden="true"></div>
+</div></section>
+
+<section id="toko"><div class="wrap">
+<div class="eyebrow">E-commerce</div>
+<h2>Tampilan Toko Online</h2>
+<p class="lead" style="margin-bottom:10px">Penataan halaman toko Citra SR12 di Shopee, dari banner promo dan voucher hingga etalase produk, dalam versi website dan ponsel.</p><p class="credit">Tampilan toko ini merupakan hasil kerja sama dengan klien, dan kreditnya milik Citra SR12.</p>
+<div class="ttabs" role="tablist" aria-label="Pilih tampilan"><button type="button" role="tab" class="on" aria-selected="true" data-t="web"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Website</button><button type="button" role="tab" aria-selected="false" data-t="hp"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M11 18h2"/></svg>Ponsel</button></div>
+<div class="tpanel on" id="t-web" role="tabpanel"><div class="tslide web"><figure class="tdev"><div class="tbar"><i></i><i></i><i></i><span>shopee.co.id/citrasr12</span></div><div class="tview"><img src="images/toko/web-1.webp" width="1200" height="7137" loading="lazy" decoding="async" alt="Halaman utama toko Citra SR12 di Shopee versi website, berisi voucher, banner promo, dan etalase produk"></div><figcaption class="tcap">Halaman utama toko<small>Scroll di dalam bingkai &middot; klik untuk memperbesar</small></figcaption></figure><figure class="tdev"><div class="tbar"><i></i><i></i><i></i><span>shopee.co.id/citrasr12</span></div><div class="tview"><img src="images/toko/web-2.webp?v=2" width="802" height="1736" loading="lazy" decoding="async" alt="Banner perbedaan manfaat, diskon toko, dan etalase kesehatan diri toko Citra SR12 di Shopee versi website"></div><figcaption class="tcap">Banner &amp; etalase produk<small>Scroll di dalam bingkai &middot; klik untuk memperbesar</small></figcaption></figure></div><div class="vdots"></div></div>
+<div class="tpanel" id="t-hp" role="tabpanel"><div class="tslide hp"><figure class="tdev"><div class="tphone"><img src="images/toko/hp-1.webp" width="602" height="1280" loading="lazy" decoding="async" alt="Beranda toko Citra SR12 di Shopee versi ponsel"></div><figcaption class="tcap">Beranda toko<small>Ketuk untuk memperbesar</small></figcaption></figure><figure class="tdev"><div class="tphone"><img src="images/toko/hp-2.webp" width="606" height="1280" loading="lazy" decoding="async" alt="Banner dan produk terlaris toko Citra SR12 di Shopee versi ponsel"></div><figcaption class="tcap">Produk terlaris<small>Ketuk untuk memperbesar</small></figcaption></figure><figure class="tdev"><div class="tphone"><img src="images/toko/hp-3.webp" width="592" height="1280" loading="lazy" decoding="async" alt="Banner perbedaan manfaat dan etalase kesehatan diri toko Citra SR12 versi ponsel"></div><figcaption class="tcap">Banner &amp; etalase<small>Ketuk untuk memperbesar</small></figcaption></figure></div><div class="vdots"></div></div>
+<div class="tzv" id="tzv" role="dialog" aria-modal="true" aria-label="Pratinjau tampilan toko"><button type="button" id="tzx" aria-label="Tutup">&times;</button><div class="tzs"><img alt=""></div></div>
 </div></section>
 
 <section id="ops"><div class="wrap">
-<h2>Behind the Brand</h2>
-<p class="lead">My visual work is backed by solid day-to-day operations.</p>
+<h2>Visual Kuat, Operasional Rapi</h2>
+<p class="lead">Karya visual yang baik perlu ditopang operasional yang tertata, agar hasilnya tidak hanya indah, tetapi juga berjalan efektif.</p>
 <div class="ops">
-<div class="skill"><h3>Online Store</h3><p>Listing setup, photos, pricing, and promos across every sales channel.</p></div>
-<div class="skill"><h3>Stock &amp; Warehouse</h3><p>Stock records, purchasing, and regular stocktakes.</p></div>
-<div class="skill"><h3>Paid Ads</h3><p>Meta Ads campaigns from audience targeting to results review.</p></div>
+<div class="skill"><h3>Toko Online</h3><p>Listing, foto, harga, dan promo yang konsisten di semua kanal penjualan, sehingga toko tampil meyakinkan bagi pembeli.</p></div>
+<div class="skill"><h3>Stok &amp; Gudang</h3><p>Pencatatan stok yang rapi, pembelian terencana, dan stok opname rutin, untuk menjaga ketersediaan barang dan kelancaran pesanan.</p></div>
+<div class="skill"><h3>Iklan Berbayar</h3><p>Pengelolaan Meta Ads, mulai dari penentuan target audiens hingga evaluasi hasil, agar anggaran iklan terpakai secara optimal.</p></div>
 </div>
 </div></section>
 
 <section id="process"><div class="wrap"><div class="pt">
-<div class="pl1"><div class="eyebrow">My Process</div><h2>How I Work</h2><p class="lead" style="margin-bottom:28px">A simple and effective process to get the best result.</p>
+<div class="pl1"><div class="eyebrow">Proses Saya</div><h2>Cara Saya Bekerja</h2><p class="lead" style="margin-bottom:28px">Proses yang sederhana dan terstruktur demi hasil terbaik.</p>
 <div class="steps">
-<div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/></svg></div><small>01</small><b>Brief</b><span>Understand the needs and goals.</span></div>
-<div class="step"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></div><small>02</small><b>Research</b><span>Explore, analyze, and gather references.</span></div>
-<div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0012 3z"/></svg></div><small>03</small><b>Design</b><span>Create concepts and visuals.</span></div>
-<div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 01-14 5.3M4 12a8 8 0 0114-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></div><small>04</small><b>Revision</b><span>Refine based on feedback.</span></div>
-<div class="step"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></div><small>05</small><b>Final Delivery</b><span>Deliver high-quality files and support.</span></div>
+<div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/></svg></div><small>01</small><b>Brief</b><span>Memahami kebutuhan dan tujuan.</span></div>
+<div class="step"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></div><small>02</small><b>Riset</b><span>Menggali, menganalisis, dan mengumpulkan referensi.</span></div>
+<div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0012 3z"/></svg></div><small>03</small><b>Desain</b><span>Membuat konsep dan visual.</span></div>
+<div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 01-14 5.3M4 12a8 8 0 0114-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></div><small>04</small><b>Revisi</b><span>Menyempurnakan sesuai masukan.</span></div>
+<div class="step"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></div><small>05</small><b>Hasil Akhir</b><span>Menyerahkan file berkualitas tinggi beserta dukungan.</span></div>
 </div></div>
 </div></div></section>
 
 <section id="contact"><div class="wrap"><div class="contact"><div class="stage cstage" id="cstage" aria-hidden="true"></div>
-<h2>Let's Collaborate!</h2>
-<p>Tell me what you need, and I'll get back to you as soon as possible.</p>
-<div class="cc"><div class="cd"><span>Phone / WhatsApp</span><a href="https://wa.me/62895340911029" target="_blank" rel="noopener">+62-895-3409-11029</a><a class="mbtn" href="https://wa.me/62895340911029" target="_blank" rel="noopener">Send a Message <span aria-hidden="true">&rarr;</span></a></div><div class="cd"><span>Gmail</span><a href="mailto:mr.andikaws@gmail.com">mr.andikaws@gmail.com</a><a class="mbtn" href="mailto:mr.andikaws@gmail.com">Send a Message <span aria-hidden="true">&rarr;</span></a></div></div>
+<h2>Mari Berkolaborasi</h2>
+<p>Sampaikan kebutuhan Anda, dan saya akan menghubungi Anda sesegera mungkin.</p>
+<div class="cc"><div class="cd"><span>Telepon / WhatsApp</span><a href="https://wa.me/62895340911029" target="_blank" rel="noopener">+62-895-3409-11029</a><a class="mbtn" href="https://wa.me/62895340911029" target="_blank" rel="noopener">Kirim Pesan <span aria-hidden="true">&rarr;</span></a></div><div class="cd"><span>Gmail</span><a href="mailto:mr.andikaws@gmail.com">mr.andikaws@gmail.com</a><a class="mbtn" href="mailto:mr.andikaws@gmail.com">Kirim Pesan <span aria-hidden="true">&rarr;</span></a></div></div>
 </div></div></section>
-<section id="partner" style="padding-top:24px"><div class="wrap"><h2>Partnership</h2><p class="lead">Clients I've worked with.</p></div><div class="mq"><div class="mt" id="mt"></div></div></section>
+<section id="partner" style="padding-top:24px"><div class="wrap"><h2>Mitra Kerja Sama</h2><p class="lead">Brand dan bisnis yang telah mempercayakan karyanya kepada saya.</p></div><div class="mq"><div class="mt" id="mt"></div></div></section>
 </main>
-<div class="wm" id="wm" role="dialog" aria-modal="true" aria-labelledby="wmt"><div class="wmp"><button class="wmx" type="button" aria-label="Close">&times;</button><div class="wmb"><div class="wmh"><div class="eyebrow" id="wmn"></div><h3 id="wmt"></h3><p id="wmd"></p><span class="wmc" id="wmc"></span></div><div class="grid" id="wmg"></div></div></div></div>
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Work preview"><button aria-label="Close" id="lbx">&times;</button><button class="lbn l" id="lbp" aria-label="Previous">&lsaquo;</button><button class="lbn r" id="lbnx" aria-label="Next">&rsaquo;</button><div id="lbc"></div></div>
-<button class="top" id="totop" aria-label="Back to top"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="21"/></svg><b>&uarr;</b></button>
+<div class="wm" id="wm" role="dialog" aria-modal="true" aria-labelledby="wmt"><div class="wmp"><button class="wmx" type="button" aria-label="Tutup">&times;</button><div class="wmb"><div class="wmh"><div class="eyebrow" id="wmn"></div><h3 id="wmt"></h3><p id="wmd"></p><span class="wmc" id="wmc"></span><p class="wcr">Kredit: seluruh karya pada koleksi ini merupakan hasil kerja sama dengan klien dan menjadi milik masing-masing klien.</p></div><div class="grid" id="wmg"></div></div></div></div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Pratinjau karya"><button aria-label="Tutup" id="lbx">&times;</button><button class="lbn l" id="lbp" aria-label="Sebelumnya">&lsaquo;</button><button class="lbn r" id="lbnx" aria-label="Berikutnya">&rsaquo;</button><div id="lbc"></div></div>
+<button class="top" id="totop" aria-label="Kembali ke atas"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="21"/></svg><b>&uarr;</b></button>
 <div class="toast" id="toast" role="status"></div>
-<footer>&copy; 2026 ANJAYA. All rights reserved.</footer>
+<footer>&copy; 2026 ANJAYA. Hak cipta dilindungi.</footer>
 
 <script>
 /* ====== PUSAT PENGATURAN: edit bagian ini saja ====== */
 var CFG={
  phone:"+62895340911029", phoneShow:"+62-895-3409-11029", email:"mr.andikaws@gmail.com",
- profile:"profil.jpg?v=2", // jalur foto profil (file ada di folder yang sama dengan index.html)
+ profile:"profil.jpg?v=3", // jalur foto profil (file ada di folder yang sama dengan index.html)
  works:[ // 5 kategori = 5 kartu. cover = foto sampul kartu, items = [foto, lebar, tinggi] yang tampil di pop-up
   {title:"3D Modeling",
-   desc:"Characters, props, and environments modeled in Blender, from anime-style hair and outfits to temples, ships, and small scenes.",
+   desc:"Karakter, kostum, rambut bergaya anime, hingga candi, kapal, dan diorama kecil, dimodelkan satu per satu di Blender dengan detail yang cermat.",
    cover:"images/3d-modeling-13.webp",
    items:[
     ["images/3d-modeling-01.webp", 1433, 859],
@@ -367,7 +518,7 @@ var CFG={
     ["images/3d-modeling-19.webp", 1500, 712]
    ]},
   {title:"3D Printing Asset",
-   desc:"Models prepared for 3D printing: character charms, keychains, figurines, and functional parts.",
+   desc:"Model yang dirancang agar hasil cetaknya rapi: charm karakter, gantungan kunci, figurin, dan komponen fungsional yang siap dipakai maupun dijual.",
    cover:"images/3d-printing-asset-23.webp",
    items:[
     ["images/3d-printing-asset-01.webp", 1339, 599],
@@ -401,17 +552,19 @@ var CFG={
     ["images/3d-printing-asset-29.webp", 1500, 726]
    ]},
   {title:"Banner & Brosur",
-   desc:"Brochures, banners, and promotional layouts for partner recruitment and product campaigns.",
+   desc:"Brosur, banner, dan layout promosi yang menyampaikan pesan dengan jelas, digunakan untuk merekrut mitra dan mendukung penjualan produk.",
    cover:"images/banner-brosur-03.webp",
    items:[
     ["images/banner-brosur-01.webp", 1500, 1061],
     ["images/banner-brosur-02.webp", 1500, 1061],
     ["images/banner-brosur-03.webp", 1060, 1500],
     ["images/banner-brosur-04.webp", 563, 1500],
-    ["images/banner-brosur-05.webp", 562, 1500]
+    ["images/banner-brosur-05.webp", 562, 1500],
+    ["images/banner-brosur-06.webp", 1058, 1500],
+    ["images/banner-brosur-07.webp", 900, 1500]
    ]},
   {title:"Onlineshop Campaign",
-   desc:"Marketplace banners and promo visuals for online stores: product packs, seasonal campaigns, and shipping promotions.",
+   desc:"Banner dan visual promosi marketplace yang dirancang untuk menarik perhatian dan menumbuhkan kepercayaan pembeli: paket produk, kampanye musiman, hingga promo ongkir.",
    cover:"images/onlineshop-campaign-06.webp",
    items:[
     ["images/onlineshop-campaign-01.webp", 1020, 1020],
@@ -431,7 +584,7 @@ var CFG={
     ["images/onlineshop-campaign-15.webp", 1024, 1024]
    ]},
   {title:"Social Media Feed",
-   desc:"Feed and story designs for social media: product highlights, brand moods, and campaign posts.",
+   desc:"Feed dan story yang konsisten dan nyaman dilihat: menonjolkan produk, membangun suasana brand, dan menjaga akun tetap aktif.",
    cover:"images/social-media-feed-02.webp",
    items:[
     ["images/social-media-feed-01.webp", 1080, 1350],
@@ -449,38 +602,45 @@ var CFG={
     ["images/social-media-feed-13.webp", 1024, 1024]
    ]}
  ],
- tools:{ // software/platform per kategori. logo:"images/tools/nama.png" untuk logo resmi; kosongkan agar memakai ikon bawaan
-  "Graphic Design":[{name:"Adobe Illustrator",mark:"Ai",bg:"#330000",fg:"#FF9A00",ring:"#FF9A00",logo:""},{name:"Canva",mark:"C",bg:"linear-gradient(135deg,#00C4CC,#7D2AE8)",fg:"#fff",logo:""}],
-  "3D Modeling":[{name:"Blender",mark:"B",bg:"linear-gradient(135deg,#F5792A,#265787)",fg:"#fff",logo:""},{name:"Mixamo",mark:"Mx",bg:"linear-gradient(135deg,#2b2b3a,#6b46c1)",fg:"#fff",logo:""},{name:"Sketchfab",mark:"Sf",bg:"#1CAAD9",fg:"#fff",logo:""}],
-  "3D Printing Asset":[{name:"Bambu Studio",mark:"Bs",bg:"#00AE42",fg:"#fff",logo:""},{name:"UltiMaker Cura",mark:"Cu",bg:"linear-gradient(135deg,#1B6FD1,#0A3F8F)",fg:"#fff",logo:""}],
-  "Video Editing":[{name:"Adobe Premiere Pro",mark:"Pr",bg:"#00005B",fg:"#9999FF",ring:"#9999FF",logo:""},{name:"CapCut Pro",mark:"Cc",bg:"#0b0b0b",fg:"#fff",ring:"#ffffff55",logo:""}],
-  "E-commerce & Brand":[{name:"Shopee",mark:"S",bg:"#EE4D2D",fg:"#fff",logo:""},{name:"TikTok Shop",mark:"Tt",bg:"#000",fg:"#fff",ring:"#25F4EE",logo:""},{name:"Tokopedia",mark:"T",bg:"#03AC0E",fg:"#fff",logo:""},{name:"Meta",mark:"\u221E",bg:"#0866FF",fg:"#fff",logo:""},{name:"Komerce",mark:"Ko",bg:"linear-gradient(135deg,#FF7A18,#E5322D)",fg:"#fff",logo:""}]
+ tools:{ // lv: 1=Basic 2=Intermediate 3=Advanced 4=Expert. logo:"images/tools/nama.png" untuk logo resmi
+  "Graphic Design":[{name:"Adobe Illustrator",mark:"Ai",bg:"#330000",fg:"#FF9A00",ring:"#FF9A00",lv:2,logo:""},{name:"Canva",mark:"C",bg:"linear-gradient(135deg,#00C4CC,#7D2AE8)",fg:"#fff",lv:3,logo:""}],
+  "3D Modeling":[{name:"Blender",mark:"B",bg:"linear-gradient(135deg,#F5792A,#265787)",fg:"#fff",lv:3,logo:"images/tools/blender.svg"}],
+  "3D Printing Asset":[{name:"Bambu Studio",mark:"Bs",bg:"#00AE42",fg:"#fff",lv:1,logo:"images/tools/bambu-studio.svg"},{name:"UltiMaker Cura",mark:"Cu",bg:"linear-gradient(135deg,#1B6FD1,#0A3F8F)",fg:"#fff",lv:2,logo:"images/tools/ultimaker-cura.png"}],
+  "Video Editing":[{name:"Adobe Premiere Pro",mark:"Pr",bg:"#00005B",fg:"#9999FF",ring:"#9999FF",lv:2,logo:""},{name:"CapCut Pro",mark:"Cc",bg:"#0b0b0b",fg:"#fff",ring:"#ffffff55",lv:3,logo:"images/tools/capcut.svg"}],
+  "E-commerce & Brand":[{name:"Shopee",mark:"S",bg:"#EE4D2D",fg:"#fff",lv:3,logo:"images/tools/shopee.svg"},{name:"TikTok Shop",mark:"Tt",bg:"#000",fg:"#fff",ring:"#25F4EE",lv:2,logo:"images/tools/tiktok-shop.svg"},{name:"Tokopedia",mark:"T",bg:"#03AC0E",fg:"#fff",lv:2,logo:"images/tools/tokopedia.svg"},{name:"Meta",mark:"\u221E",bg:"#0866FF",fg:"#fff",lv:2,logo:"images/tools/meta.svg"}]
  },
  videos:[
   {title:"Tour Review",sub:"YouTube Shorts",src:"https://www.youtube.com/shorts/C8LHAMIZUnU",vertical:true},
   {title:"Into The National Museum",sub:"YouTube Shorts",src:"https://www.youtube.com/shorts/wmU5UUAiAjA",vertical:true},
   {title:"Proclamation Museum",sub:"YouTube Shorts",src:"https://www.youtube.com/shorts/0IabA-SLmiQ",vertical:true},
+  {title:"Satu dari Keberagaman Bangsa Indonesia",sub:"YouTube Shorts",src:"https://www.youtube.com/shorts/kWlyWGPB_1k",vertical:true},
+  {title:"Merdeka dengan Menghapus Pola Pikir Buruk",sub:"YouTube Shorts",src:"https://www.youtube.com/shorts/t_sINP111cw",vertical:true},
+  {title:"Sumpah Pemuda dan Kemerdekaan",sub:"YouTube Shorts",src:"https://www.youtube.com/shorts/SWQbvOmjzNA",vertical:true},
+  {title:"Masjid Istiqlal",sub:"YouTube Shorts",src:"https://www.youtube.com/shorts/Lu9yt84iJt4",vertical:true},
+  {title:"Trailer Napak Tilas On The Spot",sub:"YouTube Shorts",src:"https://www.youtube.com/shorts/WK_iifKjfR4",vertical:true},
+  {title:"Menarik Hikmah dari Peristiwa Sejarah",sub:"YouTube Shorts",src:"https://www.youtube.com/shorts/JX-Qw3LGwn0",vertical:true},
+  {title:"Bangga Menjadi Bangsa Indonesia",sub:"YouTube Shorts",src:"https://www.youtube.com/shorts/akmAzjbjuCM",vertical:true},
   // {title:"",sub:"",src:"videos/a.mp4 atau link YouTube",poster:"images/cover.jpg",vertical:false}
  ],
  partners:[
-  {name:"Beefour Creative Agency",logo:"partner-beefour.png"},
-  {name:"Citra SR12",logo:"partner-citra-sr12.png"},
-  {name:"Westart Shopping",logo:"partner-westart.png"},
-  {name:"Rumah Tanah Liat Citra",logo:"partner-rumah-tanah-liat-citra.png"},
-  {name:"Rumah Kebangsaan Pancasila",logo:"partner-rumah-kebangsaan-pancasila.png"},
+  {name:"Beefour Creative Agency",dark:1,logo:"partner-beefour.png"},
+  {name:"Citra SR12",dark:1,logo:"partner-citra-sr12.png"},
+  {name:"Westart Shopping",dark:1,logo:"partner-westart.png"},
+  {name:"Rumah Tanah Liat Citra",dark:1,logo:"partner-rumah-tanah-liat-citra.png"},
+  {name:"Rumah Kebangsaan Pancasila",dark:1,logo:"partner-rumah-kebangsaan-pancasila.png"},
   // {name:"Nama",logo:"images/partner1.png"}
  ]
 };
 /* ====== selesai ====== */
 var g=document.getElementById("wmg"),wc=document.getElementById("wcards"),wm=document.getElementById("wm"),MT=[],openC=null,lastF=null;
-function tileHTML(c,it,i,n){var no=(i+1<10?"0":"")+(i+1);return '<figure class="tile" tabindex="0"><img class="ph" loading="lazy" decoding="async" width="'+it[1]+'" height="'+it[2]+'" src="'+it[0]+'" alt="'+c.title+' '+no+'"><figcaption>'+c.title+'<small>No. '+no+' / '+n+'</small></figcaption></figure>'}
+function tileHTML(c,it,i,n){var no=(i+1<10?"0":"")+(i+1);return '<figure class="tile" tabindex="0"><img class="ph" loading="lazy" decoding="async" width="'+it[1]+'" height="'+it[2]+'" src="'+it[0]+'" alt="'+c.title+' '+no+'"><figcaption>'+c.title+'<small>No. '+no+' / '+n+' · Hasil kerja sama dengan klien</small></figcaption></figure>'}
 var WK=CFG.works;
-wc.innerHTML=WK.map(function(c,i){var no=(i+1<10?"0":"")+(i+1);return '<button class="wcard" type="button" data-w="'+i+'" data-g="'+(i>1?"graphic":"3d")+'" aria-label="Open '+c.title+'"><img src="'+c.cover+'" alt="" loading="lazy"><span class="wno">'+no+'</span><span class="wbd"><span class="wtt">'+c.title+'</span><span class="wct">'+c.items.length+' Works</span><span class="wgo">Open Collection <i>&rarr;</i></span></span></button>'}).join("");
+wc.innerHTML=WK.map(function(c,i){var no=(i+1<10?"0":"")+(i+1);return '<button class="wcard" type="button" data-w="'+i+'" data-g="'+(i>1?"graphic":"3d")+'" aria-label="Buka '+c.title+'"><img src="'+c.cover+'" alt="" loading="lazy"><span class="wno">'+no+'</span><span class="wbd"><span class="wtt">'+c.title+'</span><span class="wct">'+c.items.length+' karya pilihan</span><span class="wgo">Lihat Koleksi <i>&rarr;</i></span></span></button>'}).join("");
 function ncol(){return wm.querySelector(".wmp").clientWidth>760?3:2}
 function buildGrid(c){var n=ncol(),cs=[],hs=[];g.innerHTML="";MT=[];for(var i=0;i<n;i++){var d=document.createElement("div");d.className="gcol";g.appendChild(d);cs.push(d);hs.push(0)}
  c.items.forEach(function(it,k){var h=document.createElement("div");h.innerHTML=tileHTML(c,it,k,c.items.length);var f=h.firstChild;f.style.animationDelay=Math.min(k,12)*45+"ms";var m=0;for(var j=1;j<n;j++)if(hs[j]<hs[m])m=j;cs[m].appendChild(f);hs[m]+=it[2]/it[1]+.04;MT.push(f)})}
 function openW(i,from){var c=WK[i];openC=i;lastF=from||null;var no=(i+1<10?"0":"")+(i+1);
- document.getElementById("wmn").textContent=no+" / 0"+WK.length;document.getElementById("wmt").textContent=c.title;document.getElementById("wmd").textContent=c.desc;document.getElementById("wmc").textContent=c.items.length+" Works";
+ document.getElementById("wmn").textContent=no+" / 0"+WK.length;document.getElementById("wmt").textContent=c.title;document.getElementById("wmd").textContent=c.desc;document.getElementById("wmc").textContent=c.items.length+" karya pilihan";
  wm.classList.add("on");document.documentElement.classList.add("noscroll");wm.querySelector(".wmb").scrollTop=0;buildGrid(c);wm.querySelector(".wmx").focus()}
 function closeW(){wm.classList.remove("on");document.documentElement.classList.remove("noscroll");if(lastF)lastF.focus();openC=null}
 wc.addEventListener("click",function(e){var b=e.target.closest(".wcard");if(b)openW(+b.dataset.w,b)});
@@ -518,18 +678,18 @@ function cl(){lb.classList.remove("on")}
 lb.addEventListener("click",function(e){if(e.target.tagName!="svg"&&e.target.tagName!="IMG"&&e.target.tagName!="P")cl()});
 addEventListener("keydown",function(e){if(e.key=="Escape")cl()});
 var P=["Nusa Studio","Kopi Rumah","PrintLab","Arsitek ID","Toko Maju","Gudang Kita","Pixel Hub","Brand Co"],SH=['<circle cx="12" cy="12" r="10"/>','<rect x="3" y="3" width="18" height="18" rx="4"/>','<path d="M12 2l10 19H2z"/>','<path d="M12 2l9 5v10l-9 5-9-5V7z"/>'];
-var ph=(CFG.partners.length?CFG.partners:P.map(function(n){return{name:n}})).map(function(p,i){return p.logo?'<div class="pl lg"><img src="'+p.logo+'" alt="'+p.name+'"></div>':'<div class="pl"><svg viewBox="0 0 24 24">'+SH[i%4]+'</svg>'+p.name+'</div>'}).join("");
+var ph=(CFG.partners.length?CFG.partners:P.map(function(n){return{name:n}})).map(function(p,i){return p.logo?'<div class="pl lg'+(p.dark?' dk':'')+'"><img src="'+p.logo+'" alt="'+p.name+'"></div>':'<div class="pl"><svg viewBox="0 0 24 24">'+SH[i%4]+'</svg>'+p.name+'</div>'}).join("");
 document.getElementById("mt").innerHTML=ph+ph+ph+ph+ph+ph;
 if(CFG.profile||window.__P){var pp=document.getElementById("portrait");pp.style.padding=0;pp.style.overflow="hidden";pp.innerHTML='<img src="'+(CFG.profile||window.__P)+'" alt="Anjaya" onerror="this.onerror=null;if(window.__P)this.src=window.__P" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%">'}
 var cds=document.querySelectorAll(".cd");
 var waHref="https://wa.me/"+CFG.phone.replace(/\D/g,"")+"?text="+encodeURIComponent("Halo Anjaya, saya tertarik untuk bekerja sama.");
 cds[0].querySelectorAll("a").forEach(function(a){a.href=waHref;a.target="_blank";a.rel="noopener"});cds[0].querySelector("a").textContent=CFG.phoneShow;
 cds[1].querySelectorAll("a").forEach(function(a){a.href="mailto:"+CFG.email;a.addEventListener("click",function(e){if(matchMedia("(hover:hover) and (pointer:fine)").matches){e.preventDefault();window.open("https://mail.google.com/mail/?view=cm&fs=1&to="+encodeURIComponent(CFG.email),"_blank","noopener")}})});cds[1].querySelector("a").textContent=CFG.email;
-if(CFG.videos.length)document.getElementById("vids").innerHTML=CFG.videos.map(function(v){var m=v.src.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/),ar=v.vertical?"9/16":"16/9",mx=v.vertical?"height:500px;width:auto;max-width:100%;margin:0 auto;":"",
+if(CFG.videos.length)document.getElementById("vids").innerHTML=CFG.videos.map(function(v){var m=v.src.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/),ar=v.vertical?"9/16":"16/9",mx="",
  md=m?'<iframe src="https://www.youtube.com/embed/'+m[1]+'" style="width:100%;aspect-ratio:'+ar+';'+mx+'border:0;display:block" allowfullscreen loading="lazy"></iframe>':'<video controls preload="metadata" playsinline'+(v.poster?' poster="'+v.poster+'"':'')+' src="'+v.src+'" style="width:100%;aspect-ratio:'+ar+';'+mx+'object-fit:contain;background:#000;display:block"></video>';
- return '<div class="vid">'+md+'<div class="t">'+(v.title||"")+'<small>'+(v.sub||"")+'</small></div></div>'}).join("");
+ return '<div class="vid'+(v.vertical?'':' wide')+'">'+md+'<div class="t">'+(v.title||"")+'<small>'+(v.sub||"")+'</small></div></div>'}).join("");
 var ts=document.getElementById("toast"),tm;
-document.querySelectorAll("[data-copy]").forEach(function(b){b.addEventListener("click",function(){var v=b.dataset.copy;(navigator.clipboard?navigator.clipboard.writeText(v):Promise.reject()).catch(function(){}).then(function(){ts.textContent=v+" copied";ts.classList.add("on");clearTimeout(tm);tm=setTimeout(function(){ts.classList.remove("on")},1800)})})});
+document.querySelectorAll("[data-copy]").forEach(function(b){b.addEventListener("click",function(){var v=b.dataset.copy;(navigator.clipboard?navigator.clipboard.writeText(v):Promise.reject()).catch(function(){}).then(function(){ts.textContent=v+" disalin";ts.classList.add("on");clearTimeout(tm);tm=setTimeout(function(){ts.classList.remove("on")},1800)})})});
 if(fine)document.querySelectorAll(".btn").forEach(function(b){b.addEventListener("pointermove",function(e){var r=b.getBoundingClientRect();b.style.transform="translate("+(e.clientX-r.left-r.width/2)*.15+"px,"+(e.clientY-r.top-r.height/2)*.25+"px)"});b.addEventListener("pointerleave",function(){b.style.transform=""})});
 
 /* ===== Interaksi tambahan ===== */
@@ -547,8 +707,9 @@ document.querySelectorAll(".skill,.stat,.cd,.vid").forEach(function(el){el.class
 document.addEventListener("pointermove",function(e){if(!fine||!e.target.closest)return;var el=e.target.closest(".sp,.portrait");if(!el)return;var r=el.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;el.style.setProperty("--mx",x+"px");el.style.setProperty("--my",y+"px");if(!reduce&&(el.classList.contains("skill")||el.classList.contains("portrait")))el.style.transform="perspective(800px) rotateY("+((x/r.width-.5)*8)+"deg) rotateX("+(-(y/r.height-.5)*8)+"deg) translateY(-3px)"});
 document.addEventListener("pointerout",function(e){var el=e.target.closest&&e.target.closest(".skill,.portrait");if(el&&!el.contains(e.relatedTarget))el.style.transform=""});
 var links={};document.querySelectorAll("nav a").forEach(function(a){links[a.getAttribute("href")]=a});
-var so=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;for(var k in links)links[k].classList.remove("active");var a=links["#"+en.target.id];if(a)a.classList.add("active")})},{rootMargin:"-45% 0px -50% 0px"});
-["hero","about","works","contact"].forEach(function(id){so.observe(document.getElementById(id))});
+var MAP=[["hero","#hero"],["about","#about"],["expertise","#about"],["works","#works"],["video","#works"],["toko","#works"],["ops","#works"],["process","#works"],["contact","#contact"],["partner","#contact"]];
+function setNav(){var y=innerHeight*.4,cur="#hero";MAP.forEach(function(m){var e=document.getElementById(m[0]);if(e&&e.getBoundingClientRect().top<=y)cur=m[1]});if(innerHeight+scrollY>=document.documentElement.scrollHeight-4)cur="#contact";for(var k in links)links[k].classList.toggle("active",k==cur)}
+addEventListener("scroll",setNav,{passive:true});addEventListener("resize",setNav);setNav();
 var tt=document.getElementById("totop"),ring=tt.querySelector("circle"),o1=document.getElementById("o1"),o2=document.getElementById("o2");
 function onS(){var h=document.documentElement,y=h.scrollTop,p=y/Math.max(1,h.scrollHeight-h.clientHeight);hd.classList.toggle("sc",y>40);tt.classList.toggle("on",y>600);ring.style.strokeDashoffset=131.9*(1-p);if(!reduce){o1.style.setProperty("--oy",(-y*.12)+"px");o2.style.setProperty("--oy",(y*.08)+"px")}}
 addEventListener("scroll",onS,{passive:true});onS();
@@ -582,10 +743,48 @@ document.querySelectorAll(".step").forEach(function(el,i){el.style.setProperty("
 
 /* ===== v6: software di tiap kartu skill ===== */
 document.querySelectorAll(".xc").forEach(function(c){var k=c.querySelector("h3").textContent,L=CFG.tools&&CFG.tools[k];if(!L)return;
- var h='<div class="xt"><span class="xtl">Tools</span><div class="xtr">'+L.map(function(it){
+ var h='<div class="xt"><span class="xtl">Software yang Saya Kuasai</span><div class="xtr">'+L.map(function(it){
   var ic=it.logo?'<span class="tic img"><img src="'+it.logo+'" alt="" loading="lazy"></span>':'<span class="tic" style="background:'+it.bg+';color:'+it.fg+(it.ring?';box-shadow:inset 0 0 0 1.5px '+it.ring:'')+'">'+it.mark+'</span>';
-  return '<span class="tool">'+ic+it.name+'</span>'}).join("")+'</div></div>';
+  var n=it.lv||1,lb=["Basic","Intermediate","Advanced","Expert"][n-1],b='';for(var q=1;q<=4;q++)b+='<i'+(q<=n?' class="on"':'')+'></i>';
+  return '<div class="tool">'+ic+'<span class="tn">'+it.name+'</span><span class="lvl">'+lb+'</span><span class="lvb" role="img" aria-label="Tingkat: '+lb+'">'+b+'</span></div>'}).join("")+'</div></div>';
  c.querySelector(".go").insertAdjacentHTML("beforebegin",h)});
+
+/* ===== v10: langit parallax (bintang, kilatan, awan ikut scroll pelan) ===== */
+(function(){var C=["#f9a8d4","#7dd3fc","#fcd34d","#c4b5fd","#86efd8"],R=Math.random,k=innerWidth<700?.55:1,L=[],H=innerHeight+160,tk=0;
+var sky=document.createElement("div");sky.className="sky";sky.setAttribute("aria-hidden","true");document.body.prepend(sky);
+function add(cl,n,f1,f2,s1,s2){n=Math.round(n*k);for(var i=0;i<n;i++){var w=document.createElement("div"),e=document.createElement("i");w.className="px";e.className=cl;
+e.style.cssText="--c:"+C[i%5]+";--sz:"+(s1+R()*(s2-s1))+"px;--w:"+(s1+R()*(s2-s1))+"px;animation-delay:"+(R()*8)+"s;animation-duration:"+(cl=="cld"?60+R()*60:3+R()*4)+"s";
+w.style.left=(R()*94)+"%";w.appendChild(e);sky.appendChild(w);L.push({w:w,y:R(),f:f1+R()*(f2-f1)})}}
+add("cld",8,.04,.12,70,150);add("spk",34,.1,.3,9,24);add("flr",8,.08,.22,14,40);
+function go(){tk=0;var y=scrollY;for(var i=0;i<L.length;i++){var o=L[i],p=((o.y*H-y*o.f)%H+H)%H-80;o.w.style.transform="translate3d(0,"+p+"px,0)"}}
+function q(){if(!tk){tk=1;requestAnimationFrame(go)}}
+addEventListener("scroll",q,{passive:true});addEventListener("resize",function(){H=innerHeight+160;q()});go();
+var sh="";for(var i=0;i<3;i++)sh+='<i class="shoot" aria-hidden="true" style="--x:'+(8+i*26)+'%;--y:'+(6+i*9)+'%;--c:'+C[i*2%5]+';animation-delay:'+(i*2.6+1)+'s"></i>';
+hero.insertAdjacentHTML("afterbegin",sh);
+if(fine&&!reduce){var lt=0;addEventListener("pointermove",function(e){var n=performance.now();if(n-lt<70)return;lt=n;var d=document.createElement("i");d.className="spk trail";d.style.cssText="position:fixed!important;pointer-events:none;left:"+(e.clientX+R()*16-8)+"px;top:"+(e.clientY+R()*16-8)+"px;--c:"+C[(R()*5)|0]+";--sz:"+(8+R()*10)+"px";document.body.appendChild(d);setTimeout(function(){d.remove()},900)})}
+})();
+/* ===== v13: slider generik (video & tampilan toko) + tab + penampil ===== */
+(function(){
+function slider(v,d,sel){if(!v||!d)return;
+function cards(){return[].slice.call(v.querySelectorAll(sel))}
+d.innerHTML=cards().map(function(){return"<i></i>"}).join("");
+[].forEach.call(d.children,function(e,n){e.addEventListener("click",function(){var c=cards()[n];v.scrollTo({left:c.offsetLeft-(v.clientWidth-c.offsetWidth)/2,behavior:reduce?"auto":"smooth"})})});
+function upd(){var c=cards(),ov=v.scrollWidth>v.clientWidth+4,m=v.scrollLeft+v.clientWidth/2,b=0,bd=1e9;c.forEach(function(e,n){var x=Math.abs(e.offsetLeft+e.offsetWidth/2-m);if(x<bd){bd=x;b=n}});
+c.forEach(function(e,n){e.classList.toggle("on",n===b)});[].forEach.call(d.children,function(e,n){e.classList.toggle("on",n===b)});
+d.style.display=ov?"flex":"none";v.classList.toggle("slide",ov)}
+var t=0;v.addEventListener("scroll",function(){if(!t){t=1;requestAnimationFrame(function(){t=0;upd()})}},{passive:true});
+addEventListener("resize",upd);addEventListener("load",upd);upd()}
+slider(document.getElementById("vids"),document.getElementById("vdots"),".vid");
+var tw=document.querySelector("#t-web .tslide"),th=document.querySelector("#t-hp .tslide");
+slider(tw,document.querySelector("#t-web .vdots"),".tdev");slider(th,document.querySelector("#t-hp .vdots"),".tdev");
+var tb=[].slice.call(document.querySelectorAll(".ttabs button")),pn={web:document.getElementById("t-web"),hp:document.getElementById("t-hp")};
+tb.forEach(function(b){b.addEventListener("click",function(){tb.forEach(function(x){var on=x===b;x.classList.toggle("on",on);x.setAttribute("aria-selected",on)});for(var k in pn)pn[k].classList.toggle("on",k===b.dataset.t);dispatchEvent(new Event("resize"))})});
+var z=document.getElementById("tzv"),zi=z.querySelector("img");document.body.appendChild(z);
+function cl(){z.classList.remove("on");document.body.style.overflow=""}
+document.addEventListener("click",function(e){var im=e.target.closest&&e.target.closest(".tview img,.tphone img");
+if(im){zi.src=im.currentSrc||im.src;zi.alt=im.alt;z.className="tzv on "+(im.closest(".tphone")?"hp":"web");z.querySelector(".tzs").scrollTop=0;document.body.style.overflow="hidden";return}
+if(z.classList.contains("on")&&z.contains(e.target)&&e.target.tagName!=="IMG")cl()});
+addEventListener("keydown",function(e){if(e.key==="Escape")cl()})})();
 </script>
 </body>
 </html>
