@@ -380,6 +380,28 @@ section .wrap{position:relative;z-index:1}
 .tslide.hp{justify-content:flex-start}.tslide.hp .tdev{flex:0 0 min(250px,68vw)}
 .tview{height:430px}
 }
+
+/* ===== v14: penanda bahwa kotak koleksi bisa diklik ===== */
+.whint{display:inline-flex;align-items:center;gap:12px;margin:0 0 18px;padding:10px 18px 10px 12px;border-radius:99px;background:rgba(255,255,255,.88);border:1px solid var(--line);box-shadow:0 8px 24px rgba(139,92,246,.16);font-size:14px;color:var(--p3);font-weight:600;transition:opacity .5s,transform .5s,max-height .5s,margin .5s;max-height:80px}
+.whint .hnd{display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px;border-radius:50%;background:linear-gradient(135deg,#f9a8d4,#a78bfa);animation:hbob 1.6s ease-in-out infinite}
+.whint.gone{opacity:0;transform:translateY(-8px);max-height:0;margin:0;padding-block:0;border-width:0;overflow:hidden;pointer-events:none}
+@keyframes hbob{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-5px) rotate(6deg)}}
+.wgo{align-self:flex-start;width:max-content;opacity:1!important;transform:none!important;padding:8px 16px;border-radius:99px;background:rgba(255,255,255,.95);color:var(--p3);box-shadow:0 6px 18px rgba(0,0,0,.2);animation:wpulse 2.6s ease-in-out infinite}
+.wgo i{animation:warr 1.4s ease-in-out infinite}
+.wcard:nth-child(2) .wgo{animation-delay:.4s}.wcard:nth-child(3) .wgo{animation-delay:.8s}.wcard:nth-child(4) .wgo{animation-delay:1.2s}.wcard:nth-child(5) .wgo{animation-delay:1.6s}
+@keyframes wpulse{0%,100%{box-shadow:0 6px 18px rgba(0,0,0,.2),0 0 0 0 rgba(236,72,153,.5)}50%{box-shadow:0 6px 18px rgba(0,0,0,.2),0 0 0 10px rgba(236,72,153,0)}}
+@keyframes warr{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+.wcards:not(.touched) .wcard{animation:wglow 7s ease-in-out infinite}
+.wcards:not(.touched) .wcard:nth-child(2){animation-delay:1.2s}.wcards:not(.touched) .wcard:nth-child(3){animation-delay:2.4s}.wcards:not(.touched) .wcard:nth-child(4){animation-delay:3.6s}.wcards:not(.touched) .wcard:nth-child(5){animation-delay:4.8s}
+.wcards:not(.touched) .wcard.hl{animation:hl 1.6s ease 2}
+@keyframes wglow{0%,22%,100%{transform:none;border-color:var(--line)}8%{transform:translateY(-6px);border-color:var(--p2);box-shadow:0 0 0 2px #f9a8d4,0 18px 44px rgba(236,72,153,.4)}}
+.tapcue{position:absolute;right:15%;bottom:26%;z-index:3;width:34px;height:34px;pointer-events:none;animation:tapm 4s ease-in-out infinite}
+.tapcue svg{position:relative;z-index:1;filter:drop-shadow(0 4px 8px rgba(0,0,0,.35))}
+.tapcue b{position:absolute;left:4px;top:-2px;width:20px;height:20px;border-radius:50%;border:3px solid #fff;opacity:0;animation:tapr 4s ease-out infinite}
+@keyframes tapm{0%{opacity:0;transform:translate(26px,34px)}14%{opacity:1;transform:translate(0,0)}26%{transform:translate(0,0) scale(.86)}36%{transform:translate(0,0) scale(1)}54%{opacity:1}68%,100%{opacity:0;transform:translate(-8px,-8px)}}
+@keyframes tapr{0%,24%{opacity:0;transform:scale(.4)}28%{opacity:.95}60%,100%{opacity:0;transform:scale(2.6)}}
+.wcards.touched .tapcue{display:none}
+@media (prefers-reduced-motion:reduce){.whint .hnd,.wgo,.wgo i,.tapcue,.tapcue b,.wcards:not(.touched) .wcard{animation:none}.tapcue{opacity:1}}
 </style>
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -429,6 +451,7 @@ section .wrap{position:relative;z-index:1}
 <section id="works"><div class="wrap">
 <div class="wh"><div><div class="eyebrow">Portofolio</div><h2>Proyek Kolaborasi dengan Klien</h2>
 <p class="lead">Setiap koleksi lahir dari kebutuhan klien yang nyata. Silakan pilih satu koleksi untuk melihat karyanya.</p><p class="credit">Seluruh karya pada halaman ini merupakan hasil kerja sama dengan klien, dan hak kepemilikannya berada pada masing-masing klien.</p></div><div class="viewer" id="viewer" aria-hidden="true"><div class="vbox" id="vbox"></div><small>Geser untuk Memutar</small></div></div>
+<div class="whint" id="whint"><span class="hnd"><svg viewBox="0 0 24 24" width="22" height="22" fill="#fff" stroke="#6d28d9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></span><span>Klik atau ketuk salah satu kotak di bawah untuk melihat karya di dalamnya</span></div>
 <div class="wcards" id="wcards"></div>
 </div></section>
 
@@ -644,6 +667,8 @@ function openW(i,from){var c=WK[i];openC=i;lastF=from||null;var no=(i+1<10?"0":"
  wm.classList.add("on");document.documentElement.classList.add("noscroll");wm.querySelector(".wmb").scrollTop=0;buildGrid(c);wm.querySelector(".wmx").focus()}
 function closeW(){wm.classList.remove("on");document.documentElement.classList.remove("noscroll");if(lastF)lastF.focus();openC=null}
 wc.addEventListener("click",function(e){var b=e.target.closest(".wcard");if(b)openW(+b.dataset.w,b)});
+wc.firstElementChild&&wc.firstElementChild.insertAdjacentHTML("beforeend",'<span class="tapcue" aria-hidden="true"><b></b>'+'<svg viewBox="0 0 24 24" width="34" height="34" fill="#fff" stroke="#6d28d9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>'+'</span>');
+wc.addEventListener("click",function(){wc.classList.add("touched");var h=document.getElementById("whint");h&&h.classList.add("gone")});
 wm.addEventListener("click",function(e){if(e.target==wm||e.target.closest(".wmx"))closeW()});
 addEventListener("keydown",function(e){if(e.key=="Escape"&&wm.classList.contains("on")&&!document.getElementById("lb").classList.contains("on"))closeW()},true);
 var rz;addEventListener("resize",function(){clearTimeout(rz);rz=setTimeout(function(){if(openC!==null&&wm.querySelector(".wmp").clientWidth>0){var n=ncol();if(g.children.length!=n)buildGrid(WK[openC])}},200)});
